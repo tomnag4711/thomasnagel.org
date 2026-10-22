@@ -1,0 +1,95 @@
+/* thomasnagel.org – Farben und Flächen wie in OWi Cockpit, Schrift lokal (keine Fremdinhalte) */
+@font-face { font-family: "Plex"; src: url("IBMPlexSans-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex"; src: url("IBMPlexSans-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+:root {
+  --grund: #ECEFF3;
+  --tinte: #14171C;
+  --text2: #4F5763;
+  --leise: #6B7380;
+  --akzent: #FF4F00;
+  --akzent-text: #C43B00;
+  --glas: rgba(255, 255, 255, 0.74);
+  --glas-rand: rgba(255, 255, 255, 0.95);
+  --schatten: 20, 30, 50;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--tinte);
+  font-family: "Plex", -apple-system, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+a { color: var(--tinte); text-decoration-color: rgba(var(--schatten), 0.35); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--akzent); }
+
+.seite { max-width: 680px; margin: 0 auto; padding: 0 16px; min-height: 100vh; display: flex; flex-direction: column; }
+header { min-height: 56px; padding: 22px 0 8px; font-weight: 600; font-size: 15px; }
+header a { text-decoration: none; }
+main { flex: 1; padding: 24px 0 40px; }
+footer { padding: 24px 0 32px; font-size: 14px; color: var(--leise); display: flex; gap: 18px; flex-wrap: wrap; }
+footer a { color: var(--leise); }
+
+h1 { font-size: 34px; line-height: 1.15; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em; }
+h2 { font-size: 20px; font-weight: 600; margin: 34px 0 8px; }
+h3 { font-size: 17px; font-weight: 600; margin: 22px 0 4px; }
+p { margin: 0 0 14px; }
+.leise { color: var(--text2); }
+.klein { font-size: 14px; color: var(--leise); }
+
+/* Erhabene Glasfläche (Bedienung in der App) */
+.glas {
+  background: var(--glas);
+  border: 1px solid var(--glas-rand);
+  border-radius: 22px;
+  box-shadow: inset 0 1px 0 #fff, 0 1px 2px rgba(var(--schatten), 0.07), 0 8px 24px rgba(var(--schatten), 0.07);
+  padding: 22px;
+}
+
+/* Eingelassene Anzeige (Ausgabe in der App) */
+.anzeige {
+  background: linear-gradient(#CDD3DB 0%, #D8DDE3 22%, #DDE1E6 100%);
+  border-radius: 22px;
+  box-shadow: inset 0 3px 9px rgba(var(--schatten), 0.20), inset 0 1px 1px rgba(var(--schatten), 0.24), 0 1px 0 rgba(255, 255, 255, 0.95);
+  padding: 28px 22px;
+}
+
+.icon { border-radius: 22.5%; box-shadow: 0 1px 2px rgba(var(--schatten), 0.10), 0 6px 18px rgba(var(--schatten), 0.12); display: block; }
+
+/* Karte auf der Startseite */
+.karte { display: flex; gap: 18px; align-items: center; text-decoration: none; margin-top: 28px; }
+.karte .icon { width: 72px; height: 72px; flex: none; }
+.karte strong { display: block; font-size: 19px; font-weight: 600; }
+.karte span { color: var(--text2); font-size: 15px; }
+.karte .pfeil { margin-left: auto; color: var(--akzent); font-size: 22px; flex: none; }
+
+/* App-Seite */
+.kopf { display: flex; gap: 20px; align-items: center; }
+.kopf .icon { width: 104px; height: 104px; flex: none; }
+.kopf h1 { margin: 0 0 4px; }
+.kopf p { margin: 0; color: var(--text2); }
+.status { display: inline-block; margin-top: 18px; font-size: 14px; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.85); }
+.status::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--akzent); margin-right: 8px; vertical-align: 1px; box-shadow: 0 0 6px rgba(255, 79, 0, 0.6); }
+
+.liste { list-style: none; margin: 0; padding: 0; }
+.liste li { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(var(--schatten), 0.08); }
+.liste li:first-child { border-top: 0; padding-top: 0; }
+.liste li:last-child { padding-bottom: 0; }
+.liste b { font-weight: 600; }
+
+.recht h2:first-of-type { margin-top: 0; }
+.recht ul { padding-left: 20px; margin: 0 0 14px; }
+.platzhalter { background: #FFE3D1; padding: 0 4px; border-radius: 4px; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+  .kopf { flex-direction: column; align-items: flex-start; }
+  .liste li { grid-template-columns: 1fr; gap: 2px; }
+}
