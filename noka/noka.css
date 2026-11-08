@@ -1,0 +1,51 @@
+/* noka – gemeinsame Gestaltung für /noka/ und /noka/datenschutz/ (später /noka/en/).
+   Keine fremden Schriften oder Dienste: ui-rounded ist auf Apple-Geräten SF Rounded. */
+:root{
+ --bg:#FAFBF5;--fl:#FFFFFF;--fg:#25291D;--mut:#6E7562;--lin:#E2E7D3;
+ --kiwi:#7E9E45;--kiwi-hell:#EEF4DC;
+ --rund:ui-rounded,"SF Pro Rounded","Nunito","Varela Round",system-ui,sans-serif;
+ --text:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+ --bg:#1C1E17;--fl:#25281F;--fg:#ECEFE3;--mut:#9DA38F;--lin:#363A2D;
+ --kiwi:#A9C76A;--kiwi-hell:#2E3622;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 var(--text)}
+main{max-width:680px;margin:0 auto;padding:48px 20px 64px}
+a{color:var(--kiwi)}
+a:focus-visible{outline:2px solid var(--kiwi);outline-offset:2px;border-radius:4px}
+p,li{max-width:62ch}
+h1,h2{font-family:var(--rund);text-wrap:balance}
+h2{font-size:21px;font-weight:600;margin:40px 0 8px}
+.mut{color:var(--mut)}
+
+/* Wortmarke: Kiwischeibe als „o“ */
+.wort{font-family:var(--rund);font-weight:600;font-size:72px;line-height:1;margin:0;letter-spacing:-.01em;color:var(--fg)}
+.wort img{height:.56em;width:.56em;vertical-align:baseline;margin:0 .02em}
+.unter{font-family:var(--rund);color:var(--mut);margin:8px 0 0;font-size:17px}
+
+.claim{font-family:var(--rund);font-size:26px;font-weight:500;line-height:1.3;margin:36px 0 10px}
+.schutz{font-family:var(--rund);color:var(--kiwi);font-size:19px;font-weight:500;margin:0}
+.schutz span{white-space:nowrap}
+
+.punkte{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.punkte li{padding-left:28px;position:relative}
+.punkte li::before{content:"";position:absolute;left:4px;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--kiwi)}
+
+.beta{margin-top:40px;background:var(--kiwi-hell);border-radius:20px;padding:22px 22px 24px}
+.beta h2{margin-top:0}
+.knopf{display:inline-block;margin-top:6px;background:var(--kiwi);color:var(--bg);font-family:var(--rund);font-weight:600;text-decoration:none;padding:12px 22px;border-radius:999px}
+
+dl{margin:0}
+dt{font-weight:600;margin-top:16px}
+dd{margin:4px 0 0}
+
+footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--lin);color:var(--mut);font-size:15px;display:flex;gap:16px;flex-wrap:wrap}
+footer a{color:var(--mut)}
+
+/* Datenschutz */
+.stand{color:var(--mut);margin:0 0 24px}
+.kurz{border-left:3px solid var(--kiwi);padding:4px 0 4px 14px;margin:24px 0}
+.seite h1{font-size:32px;margin:12px 0 4px}
+.zurueck{font-family:var(--rund);text-decoration:none}
+@media (max-width:480px){.wort{font-size:60px}.claim{font-size:23px}}
