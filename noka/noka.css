@@ -1,4 +1,4 @@
-/* noka – gemeinsame Gestaltung für /noka/ und /noka/datenschutz/ (später /noka/en/).
+/* noka – gemeinsame Gestaltung für /noka/ und /noka/datenschutz/ und /noka/en/.
    Keine fremden Schriften oder Dienste: ui-rounded ist auf Apple-Geräten SF Rounded. */
 :root{
  --bg:#FAFBF5;--fl:#FFFFFF;--fg:#25291D;--mut:#6E7562;--lin:#E2E7D3;
@@ -49,3 +49,17 @@ footer a{color:var(--mut)}
 .seite h1{font-size:32px;margin:12px 0 4px}
 .zurueck{font-family:var(--rund);text-decoration:none}
 @media (max-width:480px){.wort{font-size:60px}.claim{font-size:23px}}
+
+/* Sprachumschalter „DE · EN“ oben rechts; die aktive Sprache ist kiwigrün hervorgehoben */
+.sprache{display:flex;justify-content:flex-end;align-items:center;gap:2px;margin:-20px -12px 8px 0;font-family:var(--rund);font-size:15px}
+.sprache a,.sprache [aria-current]{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 12px;border-radius:999px;text-decoration:none;letter-spacing:.04em}
+.sprache a{color:var(--mut)}
+.sprache a:hover{color:var(--fg)}
+.sprache [aria-current]{color:var(--kiwi);background:var(--kiwi-hell);font-weight:600}
+.sprache .punkt{color:var(--lin);user-select:none}
+
+/* Hinweis für fremdsprachige Besucher auf den deutschen Seiten (nur mit Skript sichtbar) */
+.fremd{margin:0;padding:11px 20px;background:var(--kiwi-hell);text-align:center;font-family:var(--rund);font-size:15px}
+.fremd[hidden]{display:none}
+.fremd a{color:var(--fg);text-decoration:none;font-weight:600}
+.fremd a:hover{text-decoration:underline}
