@@ -63,3 +63,19 @@ footer a{color:var(--mut)}
 .fremd[hidden]{display:none}
 .fremd a{color:var(--fg);text-decoration:none;font-weight:600}
 .fremd a:hover{text-decoration:underline}
+
+/* Presseseite /noka/press/: breiter, Fotos in Paaren (hell und dunkel nebeneinander) */
+.presse main{max-width:1040px}
+.presse .intro{font-size:19px;max-width:62ch;margin-top:32px}
+.fotos{display:grid;gap:44px;margin:12px 0 0}
+.foto{margin:0}
+.foto .paar{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.foto .paar.hoch{grid-template-columns:repeat(2,minmax(0,300px));justify-content:center}
+.foto img{display:block;width:100%;height:auto}
+.foto figcaption{margin-top:12px;color:var(--mut);font-size:15px;text-align:center}
+.foto figcaption b{color:var(--fg);font-family:var(--rund);font-weight:600}
+.iphone-reihe{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 32px}
+.iphone-reihe .foto .paar{grid-template-columns:1fr 1fr;gap:8px}
+.facts{margin-top:8px}
+.kit{display:inline-block}
+@media (max-width:520px){.foto .paar,.foto .paar.hoch{grid-template-columns:1fr 1fr;gap:8px}.iphone-reihe{grid-template-columns:1fr}}
