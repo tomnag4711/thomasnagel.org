@@ -1,21 +1,25 @@
-/* noka – gemeinsame Gestaltung für /noka/ und /noka/datenschutz/ und /noka/en/.
-   Keine fremden Schriften oder Dienste: ui-rounded ist auf Apple-Geräten SF Rounded. */
+/* noka – gemeinsame Gestaltung für alle Seiten unter /noka/. Hell und dunkel folgen dem System.
+   Keine fremden Dienste: Fredoka liegt lokal im Ordner. */
+/* Fredoka: lokal eingebunden (SIL Open Font License, Text in OFL-Fredoka.txt), nur lateinische Zeichen */
+@font-face{font-family:"Fredoka";src:url("Fredoka-Variable.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
 :root{
- --bg:#FAFBF5;--fl:#FFFFFF;--fg:#25291D;--mut:#6E7562;--lin:#E2E7D3;
- --kiwi:#7E9E45;--kiwi-hell:#EEF4DC;
- --rund:ui-rounded,"SF Pro Rounded","Nunito","Varela Round",system-ui,sans-serif;
+ --bg:#FAF7EE;--fl:#FFFFFF;--fg:#2B2418;--mut:#6B6350;--lin:#E9E2D1;
+ --kiwi:#7E9E45;--kiwi-text:#4E6A20;--kiwi-hell:#EEF4DC;--band:#F2EEDF;
+ --wort:#3F5626;--knopf:#3F5626;--knopf-text:#FFFFFF;--schild:#2F6FB0;
+ --rund:"Fredoka",ui-rounded,"SF Pro Rounded",system-ui,sans-serif;
  --text:system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
- --bg:#1C1E17;--fl:#25281F;--fg:#ECEFE3;--mut:#9DA38F;--lin:#363A2D;
- --kiwi:#A9C76A;--kiwi-hell:#2E3622;color-scheme:dark}}
+ --bg:#1C1A15;--fl:#26231C;--fg:#F1ECDF;--mut:#A39C8A;--lin:#37332A;
+ --kiwi:#A9C76A;--kiwi-text:#A9C76A;--kiwi-hell:#2E3622;--band:#23211A;
+ --wort:#B9D47C;--knopf:#A9C76A;--knopf-text:#1C1A15;--schild:#6FA8E0;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 var(--text)}
 main{max-width:680px;margin:0 auto;padding:48px 20px 64px}
-a{color:var(--kiwi)}
-a:focus-visible{outline:2px solid var(--kiwi);outline-offset:2px;border-radius:4px}
+a{color:var(--kiwi-text)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--kiwi-text);outline-offset:3px;border-radius:6px}
 p,li{max-width:62ch}
-h1,h2{font-family:var(--rund);text-wrap:balance}
+h1,h2,h3{font-family:var(--rund);text-wrap:balance}
 h2{font-size:21px;font-weight:600;margin:40px 0 8px}
 .mut{color:var(--mut)}
 
@@ -25,7 +29,7 @@ h2{font-size:21px;font-weight:600;margin:40px 0 8px}
 .unter{font-family:var(--rund);color:var(--mut);margin:8px 0 0;font-size:17px}
 
 .claim{font-family:var(--rund);font-size:26px;font-weight:500;line-height:1.3;margin:36px 0 10px}
-.schutz{font-family:var(--rund);color:var(--kiwi);font-size:19px;font-weight:500;margin:0}
+.schutz{font-family:var(--rund);color:var(--kiwi-text);font-size:19px;font-weight:500;margin:0}
 .schutz span{white-space:nowrap}
 
 .punkte{list-style:none;padding:0;margin:0;display:grid;gap:12px}
@@ -34,14 +38,12 @@ h2{font-size:21px;font-weight:600;margin:40px 0 8px}
 
 .beta{margin-top:40px;background:var(--kiwi-hell);border-radius:20px;padding:22px 22px 24px}
 .beta h2{margin-top:0}
-.knopf{display:inline-block;margin-top:6px;background:var(--kiwi);color:var(--bg);font-family:var(--rund);font-weight:600;text-decoration:none;padding:12px 22px;border-radius:999px}
+.knopf{display:inline-block;margin-top:6px;background:var(--knopf);color:var(--knopf-text);font-family:var(--rund);font-weight:600;text-decoration:none;padding:12px 22px;border-radius:999px}
 
 dl{margin:0}
 dt{font-weight:600;margin-top:16px}
 dd{margin:4px 0 0}
 
-footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--lin);color:var(--mut);font-size:15px;display:flex;gap:16px;flex-wrap:wrap}
-footer a{color:var(--mut)}
 
 /* Datenschutz */
 .stand{color:var(--mut);margin:0 0 24px}
@@ -50,13 +52,6 @@ footer a{color:var(--mut)}
 .zurueck{font-family:var(--rund);text-decoration:none}
 @media (max-width:480px){.wort{font-size:60px}.claim{font-size:23px}}
 
-/* Sprachumschalter „DE · EN“ oben rechts; die aktive Sprache ist kiwigrün hervorgehoben */
-.sprache{display:flex;justify-content:flex-end;align-items:center;gap:2px;margin:-20px -12px 8px 0;font-family:var(--rund);font-size:15px}
-.sprache a,.sprache [aria-current]{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 12px;border-radius:999px;text-decoration:none;letter-spacing:.04em}
-.sprache a{color:var(--mut)}
-.sprache a:hover{color:var(--fg)}
-.sprache [aria-current]{color:var(--kiwi);background:var(--kiwi-hell);font-weight:600}
-.sprache .punkt{color:var(--lin);user-select:none}
 
 /* Hinweis für fremdsprachige Besucher auf den deutschen Seiten (nur mit Skript sichtbar) */
 .fremd{margin:0;padding:11px 20px;background:var(--kiwi-hell);text-align:center;font-family:var(--rund);font-size:15px}
@@ -79,3 +74,100 @@ footer a{color:var(--mut)}
 .facts{margin-top:8px}
 .kit{display:inline-block}
 @media (max-width:520px){.foto .paar,.foto .paar.hoch{grid-template-columns:1fr 1fr;gap:8px}.iphone-reihe{grid-template-columns:1fr}}
+
+/* ---- Kopf und Fuß (alle Seiten) ---- */
+.innen{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.kopf{position:sticky;top:0;z-index:5;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--lin)}
+.kopf .innen{display:flex;align-items:center;gap:16px;height:64px}
+.wm{display:flex;align-items:baseline;font:600 30px/1 var(--rund);color:var(--wort);text-decoration:none;letter-spacing:-.5px}
+.wm img{width:.56em;height:.56em;margin:0 .015em;display:inline-block}
+.kopf nav{margin-left:auto;display:flex;align-items:center;gap:6px;font:500 15px var(--rund)}
+.kopf nav a,.kopf nav [aria-current]{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;border-radius:999px;text-decoration:none;color:var(--fg)}
+.kopf nav .sp{gap:0;display:inline-flex;align-items:center}
+.kopf nav .sp a{color:var(--mut);padding:0 8px}
+.kopf nav .sp [aria-current]{color:var(--kiwi-text);font-weight:600;padding:0 8px}
+.kopf nav .sp .punkt{color:var(--mut)}
+.knopf-klein{background:var(--knopf);color:var(--knopf-text)!important;font-weight:600;padding:0 14px!important;margin-left:4px;white-space:nowrap}
+@media (max-width:640px){.kopf nav .weg{display:none}.kopf .innen{gap:8px}.knopf-klein{font-size:14px}}
+@media (max-width:360px){.knopf-klein{padding:0 10px!important;font-size:13px}.wm{font-size:26px}}
+.fuss{border-top:1px solid var(--lin);padding-block:28px 40px;color:var(--mut);font-size:15px}
+.fuss .innen{display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center}
+.fuss a{color:var(--mut);text-decoration:none;display:inline-flex;align-items:center;min-height:32px}
+.fuss a:hover{text-decoration:underline}
+.fuss .rechts{margin-left:auto}
+@media (max-width:480px){.fuss .rechts{margin-left:0;flex-basis:100%}}
+.seite main,main.seite{padding-top:32px}
+
+/* ---- Startseite ---- */
+.knopf-gross{display:inline-block;background:var(--knopf);color:var(--knopf-text);font:600 19px/1.2 var(--rund);text-decoration:none;padding:15px 28px;border-radius:999px}
+.knopf-gross:hover{filter:brightness(1.08)}
+main.start{max-width:none;padding:0}
+.start p{max-width:none}
+.held{position:relative;overflow:hidden}
+.held .innen{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding-block:72px 0}
+.held h1{font-size:clamp(40px,5.6vw,68px);line-height:1.06;font-weight:600;letter-spacing:-.5px;margin:0}
+.held .schutz{font:500 clamp(19px,2vw,23px)/1.35 var(--rund);color:var(--kiwi-text);margin:22px 0 0}
+.held .aktion{margin-top:34px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.held .klein{font:400 14.5px var(--rund);color:var(--mut)}
+.held .bild{position:relative;align-self:end;display:flex;justify-content:center;min-height:560px}
+.held .scheibe{position:absolute;width:520px;height:520px;right:-140px;bottom:-120px;opacity:.95}
+.held .foto-schraeg{position:relative;z-index:1;width:min(300px,78vw);transform:rotate(-4deg) translateY(40px);filter:drop-shadow(0 30px 40px rgba(43,36,24,.25))}
+.held .foto-schraeg img{display:block;width:100%;height:auto}
+.held picture{display:block}
+@media (max-width:820px){.held .innen{grid-template-columns:1fr;padding-top:44px}.held .bild{min-height:480px}}
+.start section{padding-block:96px}
+.ueber{font:500 14px var(--rund);color:var(--kiwi-text);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.start section h2{font-size:clamp(30px,3.6vw,44px);line-height:1.12;font-weight:600;max-width:20ch;margin:0}
+.lead{font-size:19px;color:var(--mut);max-width:56ch;margin:16px 0 0}
+.lead.klein{font-size:16px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.start section.schritte-zeile{padding-block:72px 8px}
+.schritte{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid var(--lin);border-bottom:1px solid var(--lin)}
+.schritte li{display:flex;gap:14px;align-items:flex-start;max-width:none}
+.schritte b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--kiwi-hell);color:var(--kiwi-text);display:grid;place-items:center;font:600 17px var(--rund)}
+.schritte h3{font-size:19px;font-weight:600;margin:0}
+.schritte p{color:var(--mut);font-size:15.5px;margin:2px 0 0}
+@media (max-width:820px){.schritte{grid-template-columns:1fr;gap:16px}}
+.zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.paar-live{display:flex;gap:20px;justify-content:center}
+.paar-live picture{flex:0 1 230px;min-width:0}
+.paar-live picture:nth-child(2){transform:translateY(46px)}
+.paar-live img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(43,36,24,.2))}
+.live{display:inline-flex;align-items:center;gap:9px;font:500 16px var(--rund);color:var(--kiwi-text);background:var(--kiwi-hell);border-radius:999px;padding:7px 15px;margin-top:12px}
+.live i{width:9px;height:9px;border-radius:50%;background:var(--kiwi);box-shadow:0 0 0 4px color-mix(in srgb,var(--kiwi) 30%,transparent)}
+@media (max-width:820px){.zwei{grid-template-columns:1fr;gap:40px}.paar-live{padding-bottom:46px}}
+.start .band{background:var(--band)}
+.drei{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:44px}
+.punkt-karte{background:var(--fl);border-radius:22px;padding:26px 24px}
+.punkt-karte svg,.kachel svg{color:var(--kiwi-text)}
+.punkt-karte svg{width:30px;height:30px}
+.punkt-karte h3{font-size:21px;font-weight:600;margin:14px 0 0}
+.punkt-karte p{color:var(--mut);margin:4px 0 0;font-size:16px}
+.label{display:flex;align-items:center;gap:16px;margin-top:28px;background:var(--fl);border-radius:18px;padding:16px 20px;max-width:520px}
+.label svg{width:34px;height:34px;flex:none;color:var(--schild)}
+.label b{font:600 17px var(--rund);display:block}
+.label span{font-size:14.5px;color:var(--mut)}
+@media (max-width:820px){.drei{grid-template-columns:1fr}}
+.duo-mitte{text-align:center}
+.duo-mitte h2{margin:0 auto!important}
+.duo-mitte .lead{margin:16px auto 0}
+.duo-bilder{display:flex;gap:28px;align-items:center;justify-content:center;margin-top:52px;flex-wrap:wrap}
+.duo-bilder picture{display:block}
+.duo-bilder img{display:block;height:auto;filter:drop-shadow(0 24px 30px rgba(43,36,24,.2))}
+.duo-bilder .gross img{width:min(560px,90vw)}
+.duo-bilder .halb img{width:min(330px,80vw)}
+.start section.klein-dinge{padding-top:40px}
+.kacheln{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:44px}
+.kachel{border:1px solid var(--lin);border-radius:20px;padding:22px}
+.kachel svg{width:26px;height:26px}
+.kachel p{font:500 17px/1.35 var(--rund);margin:12px 0 0}
+@media (max-width:820px){.kacheln{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.kacheln{grid-template-columns:1fr}}
+.preis{text-align:center}
+.preis h2{margin:0 auto!important;max-width:none!important}
+.preis .lead{margin:16px auto 0}
+.schluss{text-align:center;padding-block:110px 90px}
+.schluss .wm{justify-content:center;font-size:clamp(64px,10vw,110px)}
+.schluss .claim{font:600 clamp(22px,2.6vw,30px)/1.25 var(--rund);margin:22px 0 0}
+.schluss .knopf-gross{margin-top:30px}
+.schluss .klein{display:block;margin-top:12px;font:400 14.5px var(--rund);color:var(--mut)}
