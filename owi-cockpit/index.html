@@ -3,47 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OWi Cockpit</title>
-<meta name="description" content="OWi Cockpit – Rechenhilfe für Verkehrsordnungswidrigkeiten auf dem iPhone">
+<title>OWi Cockpit – Bußgeldsachen auf einen Blick</title>
+<meta name="description" content="Regelfolge, Rechtsfolgen und Verjährung in Bußgeldsachen im Straßenverkehr – iPhone-App">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://thomasnagel.org/owi-cockpit/">
 <link rel="icon" href="../assets/favicon.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/stil.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="OWi Cockpit">
+<meta property="og:title" content="OWi Cockpit – Bußgeldsachen auf einen Blick">
+<meta property="og:description" content="Regelfolge, Rechtsfolgen und Verjährung in Bußgeldsachen im Straßenverkehr – iPhone-App">
+<meta property="og:url" content="https://thomasnagel.org/owi-cockpit/">
+<meta property="og:image" content="https://thomasnagel.org/owi-cockpit/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OWi Cockpit: App-Icon, Name und Leitsatz">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+.seite{max-width:920px}
+a:focus-visible{outline:2px solid var(--akzent);outline-offset:3px;border-radius:4px}
+.knopf{display:inline-block;padding:10px 18px;border-radius:22px;background:linear-gradient(#fff,#F1F3F5);box-shadow:0 1px 2px rgba(20,30,50,.18),0 4px 12px rgba(20,30,50,.10);color:var(--akzent-text);font-weight:600;text-decoration:none}
+.status{margin-top:0}
+.klein2{font-size:13.5px;color:var(--leise);margin-top:10px}
+.geraet{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 22px rgba(20,30,50,.22))}
+.liste2{list-style:none;padding:0;margin:14px 0 0}
+.liste2 li{display:grid;grid-template-columns:18px 1fr;gap:10px;padding:5px 0}
+.liste2 li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--akzent);margin-top:9px;box-shadow:0 0 5px rgba(255,79,0,.5)}
+
+header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.marke{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:17px}
+.marke img{width:32px;height:32px;border-radius:22.5%}
+nav{display:flex;align-items:center;gap:16px;font-size:15px}
+nav a{text-decoration:none;color:var(--text2)}
+nav a.knopf{color:var(--akzent-text);padding:6px 14px;font-size:14px}
+.einstieg{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;padding-top:12px}
+.einstieg h1{font-size:38px;line-height:1.15}
+.fuer{font-size:18px;color:var(--text2);margin:8px 0 22px}
+.einstieg .geraet{max-width:270px;margin:0 auto}
+.module{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mod{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:16px 18px}
+.mod svg{margin-top:2px}
+.mod b{font-weight:600;font-size:17px}
+.mod p{margin:2px 0 0;color:var(--text2);font-size:15px;line-height:1.45}
+.pro{display:inline-block;font:600 11px/1.6 inherit;letter-spacing:.06em;color:#A83300;background:#FFE7DB;border-radius:5px;padding:0 6px;margin-left:6px;vertical-align:2px}
+.quelle dl{display:grid;grid-template-columns:170px 1fr;gap:8px 16px;margin:0}
+.quelle dt{font-weight:600}.quelle dd{margin:0;color:var(--text2)}
+.grenze{border-left:3px solid var(--akzent);padding-left:12px;margin-top:16px;color:var(--tinte)}
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.preis b{font-size:22px;display:block;margin-top:4px}
+.schluss{text-align:center;padding:30px 0 10px}
+footer{border-top:1px solid rgba(20,30,50,.1);margin-top:30px}
+@media (max-width:760px){
+ h2{margin:26px 0 8px;font-size:19px}
+ .mod{padding:10px 14px;grid-template-columns:26px 1fr;gap:10px}.mod svg{width:24px;height:24px}
+ .mod b{font-size:16px}.mod p{font-size:14px}
+ .module{gap:8px}
+ .glas{padding:16px}
+ .fuer{margin:6px 0 16px;font-size:16px}
+ .schluss{padding:18px 0 0}
+ .einstieg{grid-template-columns:1fr;gap:26px}
+ .einstieg h1{font-size:30px}
+ .einstieg .geraet{max-width:190px}
+ .quelle dl{grid-template-columns:1fr;gap:2px}.quelle dd{margin-bottom:8px}
+ .zwei{grid-template-columns:1fr}
+ nav .txt{display:none}
+}
+</style>
 </head>
 <body>
 <div class="seite">
-<header><a href="../">Thomas Nagel</a></header>
+<header>
+ <a class="marke" href="./"><img src="../assets/owi-cockpit-icon.png" alt="" width="32" height="32">OWi Cockpit</a>
+ <nav aria-label="Seiten"><a class="txt" href="presse/">Presse</a><a class="knopf" href="https://testflight.apple.com/join/4b4MMcvA">In TestFlight testen</a></nav>
+</header>
 <main>
-<div class="anzeige">
-  <div class="kopf">
-    <img class="icon" src="../assets/owi-cockpit-icon.png" alt="App-Icon von OWi Cockpit" width="104" height="104">
-    <div>
-      <h1>OWi Cockpit</h1>
-      <p>Rechenhilfe für Verkehrsordnungswidrigkeiten auf dem iPhone</p>
-    </div>
-  </div>
-  <span class="status">geschlossene Testphase über TestFlight</span>
+
+<section class="einstieg">
+ <div>
+  <h1>Bußgeldsachen auf einen Blick: Regelfolge, Rechtsfolgen und Verjährung in einer App.</h1>
+  <p class="fuer">Für Richterinnen und Richter, Anwältinnen und Anwälte, Bußgeldstellen und Betroffene.</p>
+  <a class="knopf" href="https://testflight.apple.com/join/4b4MMcvA">In TestFlight testen</a>
+  <p class="klein2">Kostenlos laden · Pro 2 Wochen kostenlos testen · iPhone ab iOS 18</p>
+ </div>
+ <img class="geraet" src="bilder/tempo.webp" alt="Tempo: Überschreitung 22 km/h außerorts, Regelgeldbuße 100 Euro, Tatbestandsnummer 141721, 1 Punkt, kein Fahrverbot; Anordnung Schild" width="560" height="1143">
+</section>
+
+<h2>Die Akte liegt vor Ihnen</h2>
+<p>Sie wollen in zwei Minuten wissen, ob die Regelfolge stimmt und ob die Sache verjährt ist. OWi Cockpit zeigt:</p>
+<ul class="liste2">
+ <li>Tatbestandsnummer, Regelgeldbuße, Punkte und Fahrverbot, eingestellt mit Rädern statt Suche im Katalog.</li>
+ <li>Die Rechtsfolge bei Vorsatz, Voreintragungen und Absehen vom Fahrverbot.</li>
+ <li>Die Verjährung als Zeitstrahl, auch nach altem Recht.</li>
+ <li>Die Stellungnahmen der PTB zum Messgerät.</li>
+</ul>
+
+<h2>Bereiche</h2>
+<div class="module"><div class="glas mod"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14171C" stroke-width="1.8" aria-hidden="true"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5" stroke="#FF4F00"/></svg><div><h3 style="margin:0;font-size:17px">Tempo</h3><p>Geschwindigkeitsverstöße für Pkw, Lkw und Sonderfälle, innerorts und außerorts.</p></div></div><div class="glas mod"><svg width="30" height="30" viewBox="0 0 24 24" fill="#14171C" aria-hidden="true"><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/></svg><div><h3 style="margin:0;font-size:17px">Sonstige<span class=pro>PRO</span></h3><p>Fast 300 weitere Tatbestände von Handy bis Parken.</p></div></div><div class="glas mod"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14171C" stroke-width="1.8" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><rect x="8" y="5.5" width="8" height="4" rx="1" stroke="#FF4F00"/></svg><div><h3 style="margin:0;font-size:17px">Rechner<span class=pro>PRO</span></h3><p>Vorsatz, Voreintragungen und Absehen vom Fahrverbot gegen Erhöhung.</p></div></div><div class="glas mod"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14171C" stroke-width="1.8" aria-hidden="true"><path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9s8 4 8 9"/></svg><div><h3 style="margin:0;font-size:17px">Verjährung<span class=pro>PRO</span></h3><p>Zeitstrahl nach § 33 OWiG mit absoluter Verjährung.</p></div></div><div class="glas mod"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14171C" stroke-width="1.8" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9.5 8.5l2 2 3.5-3.5" stroke="#FF4F00"/><path d="M8 15h8M8 18h6"/></svg><div><h3 style="margin:0;font-size:17px">PTB<span class=pro>PRO</span></h3><p>Messgeräte mit den Stellungnahmen der PTB.</p></div></div></div>
+
+<h2>Quellen und Datenstand</h2>
+<div class="glas quelle">
+ <dl>
+  <dt>Tatbestände</dt><dd>Bundeseinheitlicher Tatbestandskatalog des Kraftfahrt-Bundesamts, Stand 08.10.2026</dd>
+  <dt>Gesetze</dt><dd>StVG, OWiG und BKatV nach <a href="https://www.gesetze-im-internet.de/">gesetze-im-internet.de</a></dd>
+  <dt>Messgeräte</dt><dd>Veröffentlichte Stellungnahmen der Physikalisch-Technischen Bundesanstalt</dd>
+  <dt>Aktualisierung</dt><dd>Mit jedem App-Update. Ohne Server, ohne Konto</dd>
+ </dl>
+ <p class="grenze">OWi Cockpit ist ein Arbeitshilfsmittel. Die Angaben sind nicht amtlich und ersetzen weder die Prüfung im Einzelfall noch eine Rechtsberatung.</p>
 </div>
 
-<h2>Was die App kann</h2>
-<div class="glas">
-  <ul class="liste">
-    <li><b>Tempo</b><span>Regelfolge bei Geschwindigkeitsverstößen: Tatbestandsnummer, Regelgeldbuße, Punkte und Fahrverbot</span></li>
-    <li><b>Sonstige</b><span>häufige weitere Verstöße, etwa Handy, Rotlicht, Abstand, Vorfahrt und Parken</span></li>
-    <li><b>Rechner</b><span>Rechtsfolgen ausgehend von der Regelfolge, zum Beispiel bei Vorsatz oder Voreintragungen</span></li>
-    <li><b>Verjährung</b><span>Fristen und Unterbrechungen im Überblick</span></li>
-    <li><b>PTB</b><span>Messgeräte mit den Stellungnahmen der Physikalisch-Technischen Bundesanstalt</span></li>
-  </ul>
+<h2>Wer dahinter steht</h2>
+<p>Ich arbeite seit über zehn Jahren fast täglich mit Bußgeldsachen. OWi Cockpit habe ich privat und unabhängig entwickelt. Die App ist kein Angebot einer Behörde oder eines Gerichts.</p>
+<p class="klein2">Thomas Nagel, Leverkusen</p>
+
+<h2>Preis</h2>
+<div class="zwei">
+ <div class="glas preis">Tempo<b>kostenlos</b><span class="klein2">dauerhaft, ohne Abo</span></div>
+ <div class="glas preis">OWi Cockpit Pro<b>2,99 € im Monat · 24,99 € im Jahr</b><span class="klein2">2 Wochen kostenlos testen, Kündigung über die Apple-ID</span></div>
 </div>
-<p class="leise" style="margin-top:16px">Eingaben über Räder, Schieber und Schalter statt Tastatur. Keine Konten, keine Werbung, kein Tracking.</p>
+<p style="margin-top:14px"><b>In der Testphase sind alle Bereiche kostenlos.</b></p>
+<p style="margin-top:14px">Abrechnung und Belege über Apple; Sammellizenzen sind derzeit nicht vorgesehen.</p>
 
-<h2>Testphase</h2>
-<p>Die App wird derzeit in kleinem Kreis über TestFlight erprobt. Rückmeldungen gern per E-Mail an info@thomasnagel.org.</p>
+<h2>Datenschutz</h2>
+<p>Kein Konto, kein Tracking, keine Falldaten auf fremden Servern. Eingaben bleiben auf dem iPhone und werden nach 20 Minuten verworfen. App Store: „Keine Daten erfasst“. <a href="datenschutz/">Datenschutzerklärung</a></p>
 
-<h2>Hinweis</h2>
-<p class="leise">Grundlage ist der bundeseinheitliche Tatbestandskatalog des Kraftfahrt-Bundesamts (Stand 8. Oktober 2026). Die Angaben sind nicht amtlich und ohne Gewähr; sie ersetzen nicht die Prüfung im Einzelfall.</p>
-<p class="klein"><a href="datenschutz/">Datenschutzerklärung der App</a></p>
+<div class="schluss">
+ <p style="font-size:18px">Bußgeldsachen auf einen Blick.</p>
+ <a class="knopf" href="https://testflight.apple.com/join/4b4MMcvA">In TestFlight testen</a>
+</div>
 </main>
-<footer><a href="../impressum/">Impressum</a><a href="../datenschutz/">Datenschutz</a></footer>
+<footer><a href="presse/">Presse</a><a href="datenschutz/">Datenschutz</a><a href="../impressum/">Impressum</a><a href="mailto:owi-cockpit@thomasnagel.org">Kontakt</a></footer>
 </div>
 </body>
 </html>
