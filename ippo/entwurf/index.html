@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ippo Entwurf 07</title>
+<title>Ippo Entwurf 08</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preload" href="../Yomogi-Ippo.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -436,7 +436,7 @@ button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);ou
 .sheet .grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 6px}
 .sh-top{display:flex;justify-content:space-between;align-items:center}
 .sh-top h3{font-family:var(--font-hand);font-weight:400;font-size:30px;margin:0}
-.kseg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--card);border-radius:14px;padding:4px;margin-top:8px}
+.kseg{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:var(--card);border-radius:14px;padding:4px;margin-top:8px}
 .kseg button{border:0;background:none;border-radius:10px;padding:9px 4px;font-size:14px;cursor:pointer}
 .kseg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 .lbl{font-size:12px;color:var(--ink-soft);margin:16px 2px 6px;font-weight:600}
@@ -511,6 +511,42 @@ button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);ou
  :root:not([data-theme="light"]) .pencil{background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--c) 28%,transparent) 0 1px,transparent 1px 3.4px)}
  :root:not([data-theme="light"]) .rwash{background-color:color-mix(in srgb,var(--room) 45%,var(--card));background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--room) 40%,transparent) 0 1px,transparent 1px 4px)}
 }
+
+/* ===== Entwurf 08: Pakete ===== */
+.ptag{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:2px}
+.aft .ptag{font-size:10px}
+.dueflag{font-size:11.5px}
+.dueflag .pk{width:11px;height:11px;border-radius:2px;flex:none;filter:url(#rough2)}
+.school+.dueflag,.dbody .dueflag{margin:0}
+.ready i.zus{border-style:dashed;border-radius:50%}
+.ready i.zus.on{border:0;border-radius:50%;background:color-mix(in srgb,var(--c0) 70%,var(--card));filter:url(#rough2)}
+.ready .zsep{width:6px}
+.ready.big i.zus{border-radius:50%}
+.bands{display:grid;gap:6px 12px;grid-auto-rows:auto}
+.band-p{position:relative;display:flex;align-items:center;gap:10px;border:0;border-radius:12px;padding:7px 12px;cursor:pointer;text-align:left;background:var(--card);color:var(--ink);overflow:hidden;min-width:0}
+.band-p .bp-fill{position:absolute;inset:0;opacity:.55;z-index:0}
+.band-p>*:not(.bp-fill){position:relative;z-index:1}
+.band-p .bp-t{font-family:var(--font-hand);font-size:19px;white-space:nowrap}
+.band-p .bp-p{font-size:12px;color:color-mix(in srgb,var(--ink) 75%,transparent);white-space:nowrap}
+.band-p .ready i{width:11px;height:11px}
+.band-p .bp-more{margin-left:auto;font-size:12px;color:color-mix(in srgb,var(--ink) 70%,transparent);white-space:nowrap}
+.brow2{display:grid;grid-template-columns:36px 1fr auto;gap:10px;align-items:center;padding:8px 12px;border-radius:12px;background:var(--card)}
+.brow2 .sq{width:18px;height:18px;margin:0 9px;border-radius:2px;background:linear-gradient(135deg,color-mix(in srgb,var(--c0) 80%,var(--ink)) 50%,var(--c0) 50%);filter:url(#rough2)}
+.brow2 .bt b{display:block;font-weight:500;font-size:14.5px;line-height:1.3}
+.brow2 .bt small{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--ink-soft)}
+.brow2.isdone .bt b{color:var(--ink-soft)}
+.chip.small{padding:5px 10px;font-size:12.5px}
+.chip.go{background:var(--ink);color:var(--paper)}
+.chip.lnk{background:none;color:var(--ink-soft)}
+.bitems{display:grid;gap:8px}
+.bitem{display:grid;gap:6px;background:var(--card);border-radius:14px;padding:8px}
+.bitem .inp{background:var(--paper);padding:9px 12px;font-size:15px}
+.bctl{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.bctl .chip{background:var(--paper)}
+.bctl .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.bsel{font-size:12.5px;color:var(--ink-soft);display:inline-flex;align-items:center;gap:6px}
+.bsel select{font:inherit;font-size:12.5px;border:0;border-radius:999px;padding:5px 8px;background:var(--paper);color:var(--ink)}
+
 .svgdefs{position:absolute;width:0;height:0}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -524,12 +560,12 @@ button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);ou
 </svg>
 
 <div class="controls" role="toolbar" aria-label="Entwurf einstellen">
-  <h1><a href="../" style="color:inherit;text-decoration:none">Ippo</a> · Entwurf 07</h1>
+  <h1><a href="../" style="color:inherit;text-decoration:none">Ippo</a> · Entwurf 08</h1>
   <div class="seg" id="c-dev"><span>Gerät</span><button data-v="iphone">iPhone</button><button data-v="ipad">iPad</button><button data-v="both">Beide</button></div>
   <div class="seg" id="c-theme"><span>Darstellung</span><button data-v="light">Hell</button><button data-v="dark">Dunkel</button></div>
   <div class="seg" id="c-manga"><span>Manga</span><button data-v="soft">Dezent</button><button data-v="strong">Deutlich</button></div>
   <div class="seg"><button id="c-reset">Zurücksetzen</button></div>
-  <div class="note">Neu in Entwurf 07: Woche mit Farben statt Punkten (Grün viel Platz, Sand etwas Platz, Apricot voll), Tage ausklappbar. iPad: Tageskopf antippen, vergangene Tage und freier Sonntag starten eingeklappt. iPhone: in „Woche“ einen Tag antippen. Entwurf 06: Eintragen. „+“ auf dem iPhone unten rechts, „+ Neu“ auf dem iPad oben, oder ein Fach im Stundenplan antippen (die kleinen Farbquadrate). Hausaufgabe, Test und Termin. Entwurf 05: keine Uhr, keine Minuten. Aufgaben haben eine Größe (Katze, Shiba, Hirsch, Bär), der Tag zeigt nur noch Platz. Zen ersetzt den Timer: ruhiges Arbeiten, das Origami faltet sich langsam ohne Bezug zur Zeit. „Jetzt erledigen“ zeigt nur die Aufgaben des Tages. Vorführdaten erfunden, beide Geräte teilen dieselben Daten.</div>
+  <div class="note">Neu in Entwurf 08: Pakete (Dalton-Plan) mit Pflicht- und Zusatz-Bausteinen und eigenen Abgabeterminen. Auf dem iPad als Band über der Woche, Abgaben als Fähnchen am Tag, Paket antippen öffnet die Übersicht mit „einplanen“. Neues Paket über „+“ und „Paket“. Entwurf 07: Woche mit Farben statt Punkten (Grün viel Platz, Sand etwas Platz, Apricot voll), Tage ausklappbar. iPad: Tageskopf antippen, vergangene Tage und freier Sonntag starten eingeklappt. iPhone: in „Woche“ einen Tag antippen. Entwurf 06: Eintragen. „+“ auf dem iPhone unten rechts, „+ Neu“ auf dem iPad oben, oder ein Fach im Stundenplan antippen (die kleinen Farbquadrate). Hausaufgabe, Test und Termin. Entwurf 05: keine Uhr, keine Minuten. Aufgaben haben eine Größe (Katze, Shiba, Hirsch, Bär), der Tag zeigt nur noch Platz. Zen ersetzt den Timer: ruhiges Arbeiten, das Origami faltet sich langsam ohne Bezug zur Zeit. „Jetzt erledigen“ zeigt nur die Aufgaben des Tages. Vorführdaten erfunden, beide Geräte teilen dieselben Daten.</div>
 </div>
 
 <div class="stage" id="stage">
@@ -590,12 +626,27 @@ const START_TASKS=[
   {id:9,s:'en',t:'Vokabeln Unit 3 · 3 von 3',z:'k',day:3,test:'en'},
   {id:10,s:'ma',t:'Arbeitsblatt Brüche',z:'s',day:3},
   {id:11,s:'ku',t:'Skizze Stillleben',z:'h',day:4},
-  {id:12,s:'ge',t:'Referat: Gliederung',z:'b',day:5,test:'ge'}
+  {id:12,s:'ge',t:'Referat: Gliederung',z:'b',day:5,test:'ge'},
+  {id:13,s:'bi',t:'Zellmodell beschriften',z:'k',day:0,done:true,pack:'p1',kind:'pflicht',dueDay:null,dueL:null},
+  {id:14,s:'bi',t:'Mikroskopieren: Zwiebelhaut',z:'h',day:1,pack:'p1',kind:'pflicht',dueDay:4,dueL:'Fr 20.'},
+  {id:15,s:'bi',t:'Steckbrief Zellorganellen',z:'s',day:4,pack:'p1',kind:'pflicht',dueDay:null,dueL:'Mi 25.'},
+  {id:16,s:'bi',t:'Arbeitsblatt Zellteilung',z:'s',day:null,pack:'p1',kind:'pflicht',dueDay:null,dueL:'Mo 30.'},
+  {id:17,s:'bi',t:'Quiz zu den Organellen erstellen',z:'k',day:null,pack:'p1',kind:'zusatz',dueDay:null,dueL:null},
+  {id:18,s:'bi',t:'Erklärvideo zur Mitose',z:'b',day:null,pack:'p1',kind:'zusatz',dueDay:null,dueL:null},
+  {id:19,s:'ma',t:'Station 1: Erweitern',z:'k',day:4,pack:'p2',kind:'pflicht',dueDay:null,dueL:'Mo 23.'},
+  {id:20,s:'ma',t:'Station 2: Kürzen',z:'s',day:null,pack:'p2',kind:'pflicht',dueDay:null,dueL:'Mi 25.'},
+  {id:21,s:'ma',t:'Station 3: Vergleichen',z:'s',day:null,pack:'p2',kind:'pflicht',dueDay:null,dueL:'Fr 27.'},
+  {id:22,s:'ma',t:'Knobelaufgabe',z:'h',day:null,pack:'p2',kind:'zusatz',dueDay:null,dueL:null}
 ];
-let tasks,TESTS,ui;
+const START_PACKS={
+  p1:{name:'Dalton Bio: Zelle',short:'Bio-Paket',s:'bi',fromDay:0,fromL:'16.11.',endL:'Fr 4.12.',endDay:null,rest:'noch 17 Tage'},
+  p2:{name:'Dalton Mathe: Brüche',short:'Mathe-Paket',s:'ma',fromDay:2,fromL:'18.11.',endL:'Fr 27.11.',endDay:null,rest:'noch 10 Tage'}
+};
+let tasks,TESTS,PACKS,ui;
 function reset(){
   tasks=START_TASKS.map(t=>({...t}));
   TESTS=JSON.parse(JSON.stringify(START_TESTS));
+  PACKS=JSON.parse(JSON.stringify(START_PACKS));
   ui={ptab:'heute',itab:'woche',open:null,ptest:null,itest:'bi',zen:null,zpick:null,zmode:true,
       coll:[{f:'boot',s:'ma'},{f:'becher',s:'bi'},{f:'helm',s:'en'},{f:'tulpe',s:'de'},{f:'boot',s:'ge'},{f:'becher',s:'fr'}],
       refl:{step:0,choice:null,result:null},skill:null,recap:false,pnow:false,inow:false,nsel:{phone:null,ipad:null},adds:{phone:null,ipad:null},wopen:{0:false,1:true,2:true,3:true,4:true,5:true,6:false},popen:[1]};
@@ -678,7 +729,7 @@ function taskCard(t,where){
     mover=`<div class="mover">Verschieben nach ${btns}</div>`;
   }
   const acts=where==='list'?`<div class="acts"><button class="ib check d faint" data-done="${t.id}" aria-label="Erledigt">${ICON.check}</button></div>`:'';
-  return `<div class="task d" data-id="${t.id}" style="--sc:${sc(t.s)}"><div class="band pencil"></div><div class="tx" ${where==='list'?`data-open="${t.id}" role="button" tabindex="0"`:''}><b>${SUBJ[t.s][0]}</b><span>${esc(t.t)}</span>${sizeTag(t.z)}</div>${acts}${mover}</div>`;
+  return `<div class="task d" data-id="${t.id}" style="--sc:${sc(t.s)}"><div class="band pencil"></div><div class="tx" ${where==='list'?`data-open="${t.id}" role="button" tabindex="0"`:''}><b>${SUBJ[t.s][0]}</b><span>${esc(t.t)}</span>${sizeTag(t.z)}${t.pack?`<span class="ptag">${PACKS[t.pack].short} · ${t.kind==='zusatz'?'Zusatz':'Pflicht'}${t.dueL?` · bis ${t.dueL}`:''}</span>`:''}</div>${acts}${mover}</div>`;
 }
 /* Tag: Termine nach Uhrzeit, Aufgaben in ihrer Reihenfolge in die Lücken, ohne Uhrzeiten an Aufgaben */
 function buildDay(i){
@@ -714,7 +765,7 @@ const roomLegend=()=>`<div class="rlegend"><span class="r-viel"><i></i>viel Plat
 function dayItemsHTML(i){
   const d=DAYS[i];
   if(d.off)return '<div class="shint">Sonntag ist frei. Nicht für Aufgaben freigegeben.</div>';
-  const {items,over}=buildDay(i);let h='';
+  const {items,over}=buildDay(i);let h=dueFlags(i);
   if(!d.weekend)h+=`<div class="school" style="margin:2px 0 4px"><div class="chips">${d.lessons.map((l,n)=>`<i class="pencil" role="button" tabindex="0" data-addfor="${l}" aria-label="Hausaufgabe für ${SUBJ[l][0]}, ${n+1}. Stunde" style="--c:${sc(l)}">${SUBJ[l][1]}</i>`).join('')}</div>Schule bis ${d.until}</div>`;
   items.forEach(it=>{
     if(it.type==='task')h+=taskCard(it.task,'list');
@@ -756,7 +807,7 @@ function htmlToday(){
     </div>
     ${nowButton()}
     ${hintHTML(hint)}
-    <div class="sec">Tests <small>diese Woche</small></div><div class="list">${soon}</div>
+    <div class="sec">Tests und Abgaben <small>diese Woche</small></div><div class="list">${soon}${dueCards()}</div><div class="sec">Pakete</div><div class="list">${Object.keys(PACKS).map(packCard).join('')}</div>
     <div class="sec">Nachmittag</div>
     <div class="school"><div class="chips">${d.lessons.map((l,h)=>`<i class="pencil" role="button" tabindex="0" data-addfor="${l}" aria-label="Hausaufgabe für ${SUBJ[l][0]}, ${h+1}. Stunde" style="--c:${sc(l)}">${SUBJ[l][1]}</i>`).join('')}</div>Schule bis ${d.until}</div><div class="shint" style="margin:0 4px 6px">Fach antippen, um eine Hausaufgabe einzutragen.</div>
     <div class="tl">${tl}</div>${overHtml}`;
@@ -782,13 +833,14 @@ function htmlTestsList(sel){
   const items=Object.entries(TESTS).map(([k,T])=>{const rd=readiness(k);
     return `<button class="test d ${sel===k?'sel':'faint'}" data-test="${k}"><div class="dot pencil rough" style="--c:${sc(T.s)}"></div><div class="tt">${T.name}<small>${T.when.split(',')[0]} ${T.when.split(',')[1]} · ${T.inDays}</small><small>${rd>=T.rule.n?'Du bist bereit.':`Vorbereitung ${rd} von ${T.rule.n}`}</small></div>${readyHTML(k)}</button>`}).join('');
   return `${ui.refl.step<2?`<div class="sec" style="margin-top:6px">Rückblick</div>${htmlReflection()}`:''}
-  <div class="sec">Kommende Tests</div><div class="list">${items}</div>
+  <div class="sec">Pakete</div><div class="list">${Object.keys(PACKS).map(k=>packCard(k).replace('class="test d faint"',`class="test d ${sel===k?'sel':'faint'}"`)).join('')}</div><div class="frow" style="margin-top:12px"><button class="btn d faint" data-newpack="1">Neues Paket</button></div><div class="sec">Kommende Tests</div><div class="list">${items}</div>
   <div class="frow" style="margin-top:12px"><button class="btn d faint" data-newtest="1">Neuer Test</button></div>
   ${ui.refl.step>=2?`<div class="sec">Rückblick</div>${htmlReflection()}`:''}
   <div class="sec">Frühere Rückblicke</div>
   <div class="hist"><div class="d faint"><b>Deutsch-Test, 23. Oktober:</b> passte. Regel gelassen.</div><div class="d faint"><b>Vokabeltest Englisch, 16. Oktober:</b> zu knapp. Regel geändert: 3 statt 2 Wiederholungen.</div></div>`;
 }
 function htmlTestDetail(k,withBack){
+  if(isPack(k))return htmlPackDetail(k,withBack);
   const T=TESTS[k],rd=readiness(k),blocks=[];
   T.doneDates.forEach(dt=>blocks.push({on:true,label:dt,txt:'erledigt'}));
   tasks.filter(t=>t.test===k).sort((a,b)=>a.day-b.day).forEach(t=>blocks.push({on:t.done,label:`${DAYS[t.day].k} ${DAYS[t.day].date}.`,txt:t.done?'erledigt':'geplant'}));
@@ -935,7 +987,7 @@ function panel(i){
   over.forEach(t=>body+=taskCard(t,'board'));
   const rw=roomWord(i);
   const foot=`<span class="rchip"><i></i>${rw==='zu voll'?'passt nicht ganz':rw.replace(/^./,m=>m.toUpperCase())}</span>`;
-  return `<section class="panel d ${d.today?'today':'faint'} ${roomCls(i)}" data-day="${i}">${head}${flag}${school}<div class="hr"></div><div class="aft rwash">${body}</div><div class="pfoot">${foot}</div></section>`;
+  return `<section class="panel d ${d.today?'today':'faint'} ${roomCls(i)}" data-day="${i}">${head}${flag}${dueFlags(i)}${school}<div class="hr"></div><div class="aft rwash">${body}</div><div class="pfoot">${foot}</div></section>`;
 }
 
 
@@ -971,7 +1023,7 @@ function zChooser(cur,attr){
 }
 function htmlSheet(dev){
   const A=ui.adds[dev];if(!A)return '';
-  const kinds=[['hw','Hausaufgabe'],['test','Test'],['termin','Termin']];
+  const kinds=[['hw','Hausaufgabe'],['test','Test'],['paket','Paket'],['termin','Termin']];
   let body='',missing=[];
   if(A.kind==='hw'){
     body+=subjChips(A);
@@ -1010,6 +1062,8 @@ function htmlSheet(dev){
     }
     if(!A.s)missing.push('Fach');if(!A.art)missing.push('Art');if(A.date===null)missing.push('Datum');
     if(A.art&&(!A.rule||!A.rule.n||!A.rule.z||!A.rule.lead))missing.push('Vorbereitung');
+  }else if(A.kind==='paket'){
+    body+=paketSheetBody(A);missing=paketMissing(A);
   }else{
     body+=`<div class="lbl">Was?</div><input class="inp" data-ain="ttitle" placeholder="z. B. Zahnarzt, Training, Geburtstag" value="${esc(A.ttitle)}" aria-label="Termin">`;
     body+=`<div class="lbl">Tag</div><div class="chiprow">${[1,2,3,4,5,6].map(i=>`<button class="chip" data-atday="${i}" aria-pressed="${A.tday===i}">${i===1?'heute':`${DAYS[i].k} ${DAYS[i].date}.`}</button>`).join('')}</div>`;
@@ -1056,11 +1110,12 @@ document.addEventListener('input',e=>{const f=e.target.dataset&&e.target.dataset
   const btn=e.target.closest('.sheet').querySelector('[data-asave]');if(btn){/* Pflichtfelder neu prüfen ohne Fokusverlust */const ok=A.kind==='hw'?(A.s&&A.text.trim()&&A.z):A.kind==='termin'?(A.ttitle.trim()&&A.tday!==null):btn.disabled===false;
     if(A.kind!=='test'){btn.disabled=!ok;const n=btn.nextElementSibling;if(n&&ok)n.textContent=''}}});
 document.addEventListener('click',e=>{
-  const b=e.target.closest('[data-add],[data-newtest],[data-addfor],[data-akind],[data-as],[data-az],[data-adue],[data-aday],[data-aart],[data-adate],[data-arch],[data-arn],[data-arz],[data-arl],[data-atday],[data-asave],[data-acancel]');
+  const b=e.target.closest('[data-add],[data-newtest],[data-newpack],[data-addfor],[data-akind],[data-as],[data-az],[data-adue],[data-aday],[data-aart],[data-adate],[data-arch],[data-arn],[data-arz],[data-arl],[data-atday],[data-asave],[data-acancel]');
   if(!b||!b.closest('.device'))return;
   if(b.dataset.acancel&&e.target.closest('[data-stop]')&&!e.target.closest('button[data-acancel]'))return;
   const D=b.dataset,dev=b.closest('#ipad')?'ipad':'phone';
   if(D.newtest){openAdd(dev,null);ui.adds[dev].kind='test';renderAll();return}
+  if(D.newpack){openAdd(dev,null);ui.adds[dev].kind='paket';renderAll();return}
   if(D.add||D.addfor){openAdd(dev,D.addfor||null);renderAll();return}
   const A=ui.adds[dev];if(!A)return;
   if(D.acancel){ui.adds[dev]=null;renderAll();return}
@@ -1076,7 +1131,93 @@ document.addEventListener('click',e=>{
   if(D.arz){A.rule.z=D.arz;renderAll();return}
   if(D.arl){A.rule.lead=+D.arl;renderAll();return}
   if(D.atday){A.tday=+D.atday;renderAll();return}
-  if(D.asave&&!b.disabled){saveAdd(A);renderAll();return}
+  if(D.asave&&!b.disabled){if(A.kind==='paket')savePaket(A);else saveAdd(A);renderAll();return}
+});
+
+
+/* ---------- Pakete (Dalton) ---------- */
+const isPack=k=>!!(PACKS&&PACKS[k]);
+const packItems=k=>tasks.filter(t=>t.pack===k);
+function packProg(k){const it=packItems(k),p=it.filter(t=>t.kind!=='zusatz'),z=it.filter(t=>t.kind==='zusatz');
+  return {p:p.length,pd:p.filter(t=>t.done).length,z:z.length,zd:z.filter(t=>t.done).length}}
+function packSquares(k,big){const P=PACKS[k],g=packProg(k);
+  const sq=(n,d,cls)=>Array.from({length:n},(_,i)=>`<i class="${cls} ${i<d?'on':''}"></i>`).join('');
+  return `<div class="ready ${big?'big':''}" style="--c0:${sc(P.s)}" aria-label="Pflicht ${g.pd} von ${g.p}, Zusatz ${g.zd} von ${g.z}">${sq(g.p,g.pd,'')}${g.z?`<span class="zsep"></span>${sq(g.z,g.zd,'zus')}`:''}</div>`}
+const packLine=k=>{const g=packProg(k);return `Pflicht ${g.pd} von ${g.p}${g.z?` · Zusatz ${g.zd} von ${g.z}`:''}`};
+function packCard(k){const P=PACKS[k];
+  return `<button class="test d faint" data-test="${k}"><div class="dot pencil rough" style="--c:${sc(P.s)}"></div><div class="tt">${esc(P.name)}<small>${P.fromL} bis ${P.endL} · ${P.rest}</small><small>${packLine(k)}</small></div>${packSquares(k)}</button>`}
+function dueThisWeek(){return tasks.filter(t=>t.pack&&!t.done&&t.dueDay!=null&&t.dueDay>=1)}
+function dueCards(){return dueThisWeek().map(t=>{const P=PACKS[t.pack];
+  return `<button class="test d faint" data-test="${t.pack}"><div class="dot pencil rough" style="--c:${sc(P.s)}"></div><div class="tt">Abgabe: ${esc(t.t)}<small>${P.short} · bis ${t.dueL} · ${t.kind==='zusatz'?'Zusatz':'Pflicht'}</small></div>${animal(t.z,20)}</button>`}).join('')}
+function dueFlags(i){return tasks.filter(t=>t.pack&&t.dueDay===i&&!t.done).map(t=>`<div class="flag dueflag"><span class="pk pencil" style="--c:${sc(PACKS[t.pack].s)}"></span>Abgabe: ${esc(t.t)}</div>`).join('')}
+function packBands(cols){
+  const keys=Object.keys(PACKS);if(!keys.length)return '';
+  return `<div class="bands" style="grid-template-columns:${cols}">${keys.map(k=>{const P=PACKS[k];
+    const a=Math.max(0,P.fromDay),b=P.endDay==null?6:P.endDay;
+    return `<button class="band-p d faint" data-test="${k}" style="grid-column:${a+1}/${b+2};--c:${sc(P.s)}"><span class="bp-fill pencil"></span><span class="bp-t">${esc(P.name)}</span><span class="bp-p">${packLine(k)}</span>${packSquares(k)}${P.endDay==null?'<span class="bp-more">bis '+P.endL+' →</span>':''}</button>`}).join('')}</div>`;
+}
+function htmlPackDetail(k,withBack){
+  const P=PACKS[k],it=packItems(k);
+  const pfl=it.filter(t=>t.kind!=='zusatz'),zus=it.filter(t=>t.kind==='zusatz');
+  const unplanned=it.filter(t=>!t.done&&t.day==null);
+  const row=t=>{
+    const left=t.done?`<div class="sq on"></div>`:`<button class="ib check d faint" data-done="${t.id}" aria-label="Erledigt">${ICON.check}</button>`;
+    const right=t.done?'<small>erledigt</small>':(t.day!=null?`<span class="chip small">${t.day===1?'heute':`${DAYS[t.day].k} ${DAYS[t.day].date}.`}</span>`:`<button class="chip small go" data-plan="${t.id}">einplanen</button>`);
+    return `<div class="brow2 d faint ${t.done?'isdone':''}" style="--c0:${sc(P.s)}">${left}<div class="bt"><b>${esc(t.t)}</b><small>${animal(t.z,15)} ${SIZE[t.z].n} · ${t.dueL?`bis ${t.dueL}`:'ohne Termin'}</small></div>${right}</div>`};
+  return `${withBack?'<button class="back" data-back="1">‹ Tests und Pakete</button>':''}
+  <div class="head" style="padding-bottom:6px"><div><h2>${esc(P.name)}</h2><div class="sub">${P.fromL} bis ${P.endL} · ${P.rest}</div></div></div>
+  <div class="box d" style="display:grid;gap:10px">${packSquares(k,true)}<div style="font-family:var(--font-hand);font-size:24px">${packLine(k)}</div>
+    <div class="shint" style="margin:0">Quadrate sind Pflicht, Kreise sind Zusatz. Gefaltet heißt erledigt.</div></div>
+  ${unplanned.length?`<div class="frow" style="margin-top:12px;justify-content:flex-start"><button class="btn d faint" data-planall="${k}">Offene Bausteine einplanen (${unplanned.length})</button></div>`:''}
+  <p class="hint" style="display:block">Die Reihenfolge bestimmst du. Ippo schlägt nur Tage mit Platz vor, jeweils vor dem Abgabetermin.</p>
+  <div class="sec">Pflicht <small>${pfl.filter(t=>t.done).length} von ${pfl.length}</small></div><div class="blocks">${pfl.map(row).join('')}</div>
+  ${zus.length?`<div class="sec">Zusatz <small>${zus.filter(t=>t.done).length} von ${zus.length}</small></div><div class="blocks">${zus.map(row).join('')}</div>`:''}`;
+}
+function planTask(t){const due=t.dueDay!=null?t.dueDay:null;t.day=suggestFor(t.z,due)}
+/* Eintragen: Paket */
+function paketSheetBody(A){
+  if(!A.items)A.items=[{text:'',z:'s',kind:'pflicht',due:-1},{text:'',z:'s',kind:'pflicht',due:-1}];
+  let b=`<div class="lbl">Titel</div><input class="inp" data-ain="ptitle" placeholder="z. B. Dalton Bio: Zelle" value="${esc(A.ptitle||'')}" aria-label="Titel des Pakets">`;
+  const order=[...new Set([...DAYS[1].lessons,...Object.keys(SUBJ)])];
+  b+=`<div class="lbl">Fach</div><div class="chiprow">${order.map(s=>`<button class="chip" data-as="${s}" aria-pressed="${A.s===s}"><span class="dot pencil" style="--c:${sc(s)}"></span>${SUBJ[s][0]}</button>`).join('')}<button class="chip" data-as="x" aria-pressed="${A.s==='x'}">fächerübergreifend</button></div>`;
+  b+=`<div class="lbl">Abgabe des ganzen Pakets</div><div class="chiprow">${TDATES.map((d,n)=>`<button class="chip" data-pend="${n}" aria-pressed="${A.pend===n}">${d.l} <small>${d.w}</small></button>`).join('')}</div>`;
+  b+=`<div class="lbl">Bausteine</div><div class="bitems">${A.items.map((x,n)=>`<div class="bitem d faint">
+      <input class="inp" data-bin="${n}" placeholder="Baustein ${n+1}" value="${esc(x.text)}" aria-label="Baustein ${n+1}">
+      <div class="bctl"><button class="chip small" data-bz="${n}" aria-label="Größe ändern">${animal(x.z,16)} ${SIZE[x.z].n}</button>
+      <button class="chip small" data-bk="${n}" aria-pressed="${x.kind==='zusatz'}">${x.kind==='zusatz'?'Zusatz':'Pflicht'}</button>
+      <label class="bsel">Termin <select data-bd="${n}"><option value="-1" ${x.due===-1?'selected':''}>keiner</option>${TDATES.map((d,m)=>`<option value="${m}" ${x.due===m?'selected':''}>${d.l}</option>`).join('')}</select></label>
+      ${A.items.length>1?`<button class="chip small lnk" data-bdel="${n}" aria-label="Baustein entfernen">entfernen</button>`:''}</div></div>`).join('')}</div>
+    <button class="chip" data-badd="1" style="margin-top:8px">+ Baustein</button>
+    <div class="shint">Antippen wechselt Größe und Pflicht/Zusatz. Ein eigener Termin ist nur nötig, wenn der Baustein vorher fertig sein muss.</div>`;
+  return b;
+}
+function paketMissing(A){const m=[];if(!(A.ptitle||'').trim())m.push('Titel');if(!A.s)m.push('Fach');if(A.pend==null)m.push('Abgabe');if(!(A.items||[]).some(x=>x.text.trim()))m.push('ein Baustein');return m}
+function savePaket(A){
+  const key='p'+(nextId++),d=TDATES[A.pend],s=A.s==='x'?'ku':A.s;
+  PACKS[key]={name:A.ptitle.trim(),short:A.s==='x'?'Paket':`${SUBJ[s][0]}-Paket`,s,fromDay:1,fromL:'17.11.',endL:d.l,endDay:d.day,rest:d.w};
+  A.items.filter(x=>x.text.trim()).forEach(x=>{const dd=x.due>=0?TDATES[x.due]:null;
+    tasks.push({id:nextId++,s,t:x.text.trim(),z:x.z,day:null,pack:key,kind:x.kind,dueDay:dd?dd.day:null,dueL:dd?dd.l:null})});
+  if(A.dev==='ipad'){ui.itab='tests';ui.itest=key}else{ui.ptab='tests';ui.ptest=key}
+  ui.adds[A.dev]=null;
+}
+document.addEventListener('input',e=>{const t=e.target;if(!t.closest||!t.closest('.device'))return;const dv=t.closest('#ipad')?'ipad':'phone';const A=ui.adds[dv];if(!A||A.kind!=='paket')return;
+  if(t.dataset.bin!==undefined)A.items[+t.dataset.bin].text=t.value;
+  const btn=t.closest('.sheet')&&t.closest('.sheet').querySelector('[data-asave]');
+  if(btn){const m=paketMissing(A);btn.disabled=!!m.length;const n=btn.nextElementSibling;if(n)n.textContent=m.length?`Fehlt noch: ${m.join(', ')}`:''}});
+document.addEventListener('change',e=>{const t=e.target;if(t.dataset.bd===undefined)return;const dv=t.closest('#ipad')?'ipad':'phone';const A=ui.adds[dv];if(!A)return;A.items[+t.dataset.bd].due=+t.value});
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-plan],[data-planall],[data-pend],[data-bz],[data-bk],[data-badd],[data-bdel]');
+  if(!b||!b.closest('.device'))return;
+  const D=b.dataset,dv=b.closest('#ipad')?'ipad':'phone',A=ui.adds[dv];
+  if(D.plan){const t=tasks.find(x=>x.id===+D.plan);planTask(t);flashId=t.id;renderAll();return}
+  if(D.planall){packItems(D.planall).filter(t=>!t.done&&t.day==null).forEach(planTask);renderAll();return}
+  if(!A)return;
+  if(D.pend!==undefined){A.pend=+D.pend}
+  else if(D.bz!==undefined){const x=A.items[+D.bz];x.z=SIZES[(SIZES.indexOf(x.z)+1)%4]}
+  else if(D.bk!==undefined){const x=A.items[+D.bk];x.kind=x.kind==='zusatz'?'pflicht':'zusatz'}
+  else if(D.badd){A.items.push({text:'',z:'s',kind:'pflicht',due:-1})}
+  else if(D.bdel!==undefined){A.items.splice(+D.bdel,1)}
+  renderAll();
 });
 
 /* ---------- Rendern ---------- */
@@ -1094,7 +1235,7 @@ function renderPhone(){
   switch(ui.ptab){
     case 'heute':h=htmlToday();break;
     case 'woche':h=`<div class="head"><div><h2>Woche</h2><div class="sub">KW 47 · 16. bis 22. November</div></div><span class="pill d faint">Woche A</span></div>${htmlWeekList()}<p class="hint" style="display:block">Tag antippen zum Aufklappen.</p>`;break;
-    case 'tests':h=ui.ptest?htmlTestDetail(ui.ptest,true):`<div class="head"><div><h2>Tests</h2><div class="sub">Deine Vorbereitung, deine Regeln</div></div></div>${htmlTestsList(null)}`;break;
+    case 'tests':h=ui.ptest?htmlTestDetail(ui.ptest,true):`<div class="head"><div><h2>Tests</h2><div class="sub">Tests und Pakete, deine Regeln</div></div></div>${htmlTestsList(null)}`;break;
     case 'zen':h=htmlZen('phone');break;
     case 'ich':h=`<div class="head"><div><h2>Ich</h2><div class="sub">1. Halbjahr · seit 19. August</div></div></div>${htmlRecap()}<div class="sec">Sammlung <small>${ui.coll.length} Figuren</small></div>${htmlCollection()}<div class="sec">Fähigkeiten</div>${htmlSkills()}<div class="sec">Deine Größen</div>${htmlSizes()}`;break;
   }
@@ -1107,18 +1248,18 @@ function renderIpad(){
   const zenRunning=ui.zen&&!ui.zen.finished&&(ui.inow||ui.itab==='zen');
   iscr.classList.toggle('nowmode',!!ui.inow||!!zenRunning);
   if(ui.inow||zenRunning){iMain.innerHTML=`<div class="col" data-sk="inow" style="grid-row:1/-1">${ui.inow?htmlNow('ipad'):htmlZen('ipad')}</div>`;iMain.style.gridTemplateRows='1fr';return}
-  iMain.style.gridTemplateRows=ui.itab==='woche'?'auto auto 1fr':'auto 1fr';
+  iMain.style.gridTemplateRows=ui.itab==='woche'?'auto auto auto 1fr':'auto 1fr';
   let h='';
   if(ui.itab==='woche'){
     const td=tasks.filter(t=>t.done).length;
     let wk='';for(let i=0;i<7;i++)wk+=panel(i);const cols=DAYS.map((_,i)=>ui.wopen[i]?(DAYS[i].weekend?'.85fr':'1fr'):'48px').join(' ');
-    h=`<div class="mhead"><div><h2>KW 47</h2><div class="sub">16. bis 22. November · Woche A</div></div><div class="wsum"><span><b>${tasks.length}</b> Aufgaben</span><span><b>${td}</b> erledigt</span><span><b>2</b> Tests</span>${nowButton()}${addBtn()}</div></div>${roomLegend()}<div class="week" style="grid-template-columns:${cols}">${wk}</div>
+    h=`<div class="mhead"><div><h2>KW 47</h2><div class="sub">16. bis 22. November · Woche A</div></div><div class="wsum"><span><b>${tasks.length}</b> Aufgaben</span><span><b>${td}</b> erledigt</span><span><b>2</b> Tests</span>${nowButton()}${addBtn()}</div></div>${roomLegend()}${packBands(cols)}<div class="week" style="grid-template-columns:${cols}">${wk}</div>
       <div class="ibub">${BUB2}Zieh Aufgaben auf einen anderen Tag. Wie voll ein Tag ist, zeigt die Farbe. Tageskopf antippen klappt ein.</div>`;
   }else if(ui.itab==='heute'){
     h=`<div class="mhead"><div><h2>Heute</h2><div class="sub">Dienstag, 17. November · KW 47</div></div><div class="wsum">${nowButton()}${addBtn()}</div></div>
       <div class="cols" style="grid-template-columns:1fr 1fr"><div class="col" data-sk="ih1">${htmlToday().replace(/<div class="head">[\s\S]*?<\/span><\/div>/,'').replace(/<button class="nowbtn"[\s\S]*?<\/button>/,'')}</div><div class="col" data-sk="ih2"><div class="sec" style="margin-top:4px">Diese Woche</div>${htmlWeekList()}</div></div>`;
   }else if(ui.itab==='tests'){
-    h=`<div class="mhead"><div><h2>Tests</h2><div class="sub">Deine Vorbereitung, deine Regeln</div></div>${addBtn()}</div>
+    h=`<div class="mhead"><div><h2>Tests</h2><div class="sub">Tests und Pakete, deine Regeln</div></div>${addBtn()}</div>
       <div class="cols" style="grid-template-columns:400px 1fr"><div class="col" data-sk="it1">${htmlTestsList(ui.itest)}</div><div class="col" data-sk="it2">${htmlTestDetail(ui.itest,false)}</div></div>`;
   }else if(ui.itab==='zen'){
     h=`<div class="mhead"><div><h2>Zen</h2><div class="sub">Arbeiten ohne Uhr</div></div></div><div style="min-height:0">${htmlZen('ipad')}</div>`;
