@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ippo Entwurf 06</title>
+<title>Ippo Entwurf 07</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preload" href="../Yomogi-Ippo.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -464,6 +464,53 @@ button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);ou
 .sh-foot .shint{margin:0}
 .btn[disabled]{opacity:.35;cursor:default}
 
+
+/* ===== Entwurf 07: Farben statt Punkte, ausklappbar ===== */
+:root{--r-viel:#cfe7d3;--r-etwas:#f2e2b3;--r-voll:#f4cdb2;--r-off:#e6e4e0}
+:root[data-theme="dark"]{--r-viel:#3e5a47;--r-etwas:#5e5434;--r-voll:#66473a;--r-off:#33323a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--r-viel:#3e5a47;--r-etwas:#5e5434;--r-voll:#66473a;--r-off:#33323a}}
+.r-viel{--room:var(--r-viel)}.r-etwas{--room:var(--r-etwas)}.r-voll,.r-zu{--room:var(--r-voll)}.r-off{--room:var(--r-off)}
+.rwash{background-color:color-mix(in srgb,var(--room) 55%,var(--card));background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--room) 85%,transparent) 0 1px,transparent 1px 4px)}
+.r-zu .rwash{background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--room) 100%,var(--ink) 8%) 0 1.4px,transparent 1.4px 3px)}
+.rlegend{display:flex;gap:14px;font-size:12px;color:var(--ink-soft);margin:0 4px 8px;flex-wrap:wrap}
+.rlegend span{display:inline-flex;align-items:center;gap:6px}
+.rlegend i,.rchip i{width:14px;height:10px;border-radius:3px;background:color-mix(in srgb,var(--room) 80%,var(--card));display:inline-block;filter:url(#rough2)}
+.rchip{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink)}
+.panel .aft.rwash{border-radius:0}
+.panel .aft .task,.panel .aft .blk.free{background-color:var(--card)}
+.ph{padding:0}
+.ph-b{display:flex;align-items:baseline;gap:6px;width:100%;border:0;background:none;padding:10px 12px 6px;cursor:pointer;text-align:left;color:var(--ink)}
+.ph-b .chev{margin-left:auto;font-size:16px;color:var(--ink-soft)}
+.ph-b .tm{margin-left:auto}
+.ph-b .tm+.chev{margin-left:6px}
+.ph-c{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;height:100%;border:0;background:none;padding:10px 0;cursor:pointer;color:var(--ink);border-radius:inherit}
+.ph-c .dn{font-family:var(--font-hand);font-size:22px}
+.ph-c .dd{font-size:11px;color:var(--ink-soft)}
+.ph-c .cstrip{flex:1;width:18px;border-radius:9px;min-height:40px}
+.ph-c .cflag{width:12px;height:12px;border-radius:3px;background:var(--c)}
+.ph-c .ccount{font-family:var(--font-hand);font-size:18px;color:var(--ink-soft)}
+.panel.col-closed{min-width:0}
+.week{grid-template-columns:repeat(7,1fr)}
+.manga-strong .panel.col-closed{transform:none}
+.drow2{background:var(--card);border-radius:14px}
+.drow-h{display:grid;grid-template-columns:40px 1fr auto 14px;gap:10px;align-items:center;width:100%;border:0;background:none;padding:10px 12px;cursor:pointer;text-align:left;color:var(--ink)}
+.drow-h .dn{font-family:var(--font-hand);font-size:24px}
+.drow-h .dmid{display:grid;gap:5px}
+.drow-h .tb{height:12px;border-radius:6px;display:block}
+.drow-h .dsub{font-size:12px;color:var(--ink-soft)}
+.drow-h .dr{font-size:12px;font-weight:600;white-space:nowrap}
+.drow-h .chev{color:var(--ink-soft)}
+.dbody{display:grid;gap:6px;padding:0 12px 12px 12px}
+.dbody .task .acts{padding:0 6px}
+
+
+/* Dunkel: Schraffur ruhiger, Text bleibt lesbar */
+:root[data-theme="dark"] .pencil{background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--c) 28%,transparent) 0 1px,transparent 1px 3.4px)}
+:root[data-theme="dark"] .rwash{background-color:color-mix(in srgb,var(--room) 45%,var(--card));background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--room) 40%,transparent) 0 1px,transparent 1px 4px)}
+@media (prefers-color-scheme: dark){
+ :root:not([data-theme="light"]) .pencil{background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--c) 28%,transparent) 0 1px,transparent 1px 3.4px)}
+ :root:not([data-theme="light"]) .rwash{background-color:color-mix(in srgb,var(--room) 45%,var(--card));background-image:repeating-linear-gradient(118deg,color-mix(in srgb,var(--room) 40%,transparent) 0 1px,transparent 1px 4px)}
+}
 .svgdefs{position:absolute;width:0;height:0}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -477,12 +524,12 @@ button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);ou
 </svg>
 
 <div class="controls" role="toolbar" aria-label="Entwurf einstellen">
-  <h1><a href="../" style="color:inherit;text-decoration:none">Ippo</a> · Entwurf 06</h1>
+  <h1><a href="../" style="color:inherit;text-decoration:none">Ippo</a> · Entwurf 07</h1>
   <div class="seg" id="c-dev"><span>Gerät</span><button data-v="iphone">iPhone</button><button data-v="ipad">iPad</button><button data-v="both">Beide</button></div>
   <div class="seg" id="c-theme"><span>Darstellung</span><button data-v="light">Hell</button><button data-v="dark">Dunkel</button></div>
   <div class="seg" id="c-manga"><span>Manga</span><button data-v="soft">Dezent</button><button data-v="strong">Deutlich</button></div>
   <div class="seg"><button id="c-reset">Zurücksetzen</button></div>
-  <div class="note">Neu in Entwurf 06: Eintragen. „+“ auf dem iPhone unten rechts, „+ Neu“ auf dem iPad oben, oder ein Fach im Stundenplan antippen (die kleinen Farbquadrate). Hausaufgabe, Test und Termin. Entwurf 05: keine Uhr, keine Minuten. Aufgaben haben eine Größe (Katze, Shiba, Hirsch, Bär), der Tag zeigt nur noch Platz. Zen ersetzt den Timer: ruhiges Arbeiten, das Origami faltet sich langsam ohne Bezug zur Zeit. „Jetzt erledigen“ zeigt nur die Aufgaben des Tages. Vorführdaten erfunden, beide Geräte teilen dieselben Daten.</div>
+  <div class="note">Neu in Entwurf 07: Woche mit Farben statt Punkten (Grün viel Platz, Sand etwas Platz, Apricot voll), Tage ausklappbar. iPad: Tageskopf antippen, vergangene Tage und freier Sonntag starten eingeklappt. iPhone: in „Woche“ einen Tag antippen. Entwurf 06: Eintragen. „+“ auf dem iPhone unten rechts, „+ Neu“ auf dem iPad oben, oder ein Fach im Stundenplan antippen (die kleinen Farbquadrate). Hausaufgabe, Test und Termin. Entwurf 05: keine Uhr, keine Minuten. Aufgaben haben eine Größe (Katze, Shiba, Hirsch, Bär), der Tag zeigt nur noch Platz. Zen ersetzt den Timer: ruhiges Arbeiten, das Origami faltet sich langsam ohne Bezug zur Zeit. „Jetzt erledigen“ zeigt nur die Aufgaben des Tages. Vorführdaten erfunden, beide Geräte teilen dieselben Daten.</div>
 </div>
 
 <div class="stage" id="stage">
@@ -551,7 +598,7 @@ function reset(){
   TESTS=JSON.parse(JSON.stringify(START_TESTS));
   ui={ptab:'heute',itab:'woche',open:null,ptest:null,itest:'bi',zen:null,zpick:null,zmode:true,
       coll:[{f:'boot',s:'ma'},{f:'becher',s:'bi'},{f:'helm',s:'en'},{f:'tulpe',s:'de'},{f:'boot',s:'ge'},{f:'becher',s:'fr'}],
-      refl:{step:0,choice:null,result:null},skill:null,recap:false,pnow:false,inow:false,nsel:{phone:null,ipad:null},adds:{phone:null,ipad:null}};
+      refl:{step:0,choice:null,result:null},skill:null,recap:false,pnow:false,inow:false,nsel:{phone:null,ipad:null},adds:{phone:null,ipad:null},wopen:{0:false,1:true,2:true,3:true,4:true,5:true,6:false},popen:[1]};
 }
 reset();
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -658,6 +705,27 @@ function readyHTML(k,big){const T=TESTS[k],rd=readiness(k);
   return `<div class="ready ${big?'big':''}" style="--c0:${sc(T.s)}" aria-label="Vorbereitung ${rd} von ${T.rule.n}">${Array.from({length:T.rule.n},(_,n)=>`<i class="${n<rd?'on':''}"></i>`).join('')}</div>`}
 const freeWord=m=>m>=45?'viel Platz':'etwas Platz';
 
+
+/* ---------- Woche: Farben und Ausklappen ---------- */
+const ROOM={'viel Platz':'r-viel','etwas Platz':'r-etwas','voll':'r-voll','zu voll':'r-zu','frei':'r-off'};
+const roomCls=i=>DAYS[i].off?'r-off':ROOM[roomWord(i)];
+const roomLabel=i=>DAYS[i].off?'frei':roomWord(i);
+const roomLegend=()=>`<div class="rlegend"><span class="r-viel"><i></i>viel Platz</span><span class="r-etwas"><i></i>etwas Platz</span><span class="r-voll"><i></i>voll</span></div>`;
+function dayItemsHTML(i){
+  const d=DAYS[i];
+  if(d.off)return '<div class="shint">Sonntag ist frei. Nicht für Aufgaben freigegeben.</div>';
+  const {items,over}=buildDay(i);let h='';
+  if(!d.weekend)h+=`<div class="school" style="margin:2px 0 4px"><div class="chips">${d.lessons.map((l,n)=>`<i class="pencil" role="button" tabindex="0" data-addfor="${l}" aria-label="Hausaufgabe für ${SUBJ[l][0]}, ${n+1}. Stunde" style="--c:${sc(l)}">${SUBJ[l][1]}</i>`).join('')}</div>Schule bis ${d.until}</div>`;
+  items.forEach(it=>{
+    if(it.type==='task')h+=taskCard(it.task,'list');
+    else if(it.type==='free')h+=`<div class="blk free d dash">${freeWord(it.m)}</div>`;
+    else if(it.type==='fixed'&&!it.small)h+=`<div class="blk fixed d faint">${esc(it.t)}<small>${it.s} bis ${it.e}</small></div>`;
+    else if(it.type==='lei')h+=`<div class="blk leisure pencil d faint">${esc(it.t)}<small>Freizeit ${it.s} bis ${it.e}</small></div>`;
+  });
+  over.forEach(t=>h+=taskCard(t,'list'));
+  return h;
+}
+
 /* ---------- Heute ---------- */
 function htmlToday(){
   const i=1,d=DAYS[i],c=cap(i),pl=planned(i),r=c-pl;
@@ -694,10 +762,9 @@ function htmlToday(){
     <div class="tl">${tl}</div>${overHtml}`;
 }
 function htmlWeekList(){
-  return `<div class="list">${DAYS.map((d,i)=>{const tst=Object.values(TESTS).filter(T=>T.day===i).map(T=>T.name).join(', ');
-    return `<div class="drow d ${d.today?'':'faint'}"><div class="dn">${d.k}</div><div><div class="tb tone d faint" style="--dot:${loadDot(i)}px"></div><div style="font-size:12px;color:var(--ink-soft);margin-top:5px">${d.off?'nicht freigegeben':n1(dayTasks(i).length,'Aufgabe','Aufgaben')}${tst?` · ${tst}`:''}</div></div><div class="dr">${d.off?'frei':roomWord(i)}</div></div>`}).join('')}</div>`;
+  return `${roomLegend()}<div class="list">${DAYS.map((d,i)=>{const tst=Object.values(TESTS).filter(T=>T.day===i).map(T=>T.name).join(', ');const open=ui.popen.includes(i);
+    return `<div class="drow2 d ${d.today?'':'faint'} ${roomCls(i)}"><button class="drow-h" data-pday="${i}" aria-expanded="${open}"><span class="dn">${d.k}</span><span class="dmid"><span class="tb rwash"></span><span class="dsub">${d.off?'nicht freigegeben':n1(dayTasks(i).length,'Aufgabe','Aufgaben')}${tst?` · ${tst}`:''}</span></span><span class="dr">${roomLabel(i)}</span><span class="chev" aria-hidden="true">${open?'▾':'▸'}</span></button>${open?`<div class="dbody">${dayItemsHTML(i)}</div>`:''}</div>`}).join('')}</div>`;
 }
-
 /* ---------- Tests ---------- */
 function htmlReflection(){
   const R=ui.refl;let inner;
@@ -848,11 +915,15 @@ function htmlRecap(){
 
 /* ---------- Woche (iPad) ---------- */
 function panel(i){
-  const d=DAYS[i];
+  const d=DAYS[i],open=ui.wopen[i];
   const test=Object.entries(TESTS).find(([k,T])=>T.day===i);
+  if(!open){
+    return `<section class="panel col-closed d faint ${roomCls(i)}" data-day="${i}"><button class="ph-c" data-wday="${i}" aria-expanded="false" aria-label="${d.name} aufklappen"><span class="dn">${d.k}</span><span class="dd">${d.date}.</span><span class="rwash cstrip"></span>${test?`<span class="cflag" style="--c:${sc(test[1].s)}"></span>`:''}<span class="ccount">${d.off?'frei':dayTasks(i).length}</span></button></section>`;
+  }
   const flag=test?`<div class="flag">${readyHTML(test[0])}${test[1].name}</div>`:'';
   const school=d.weekend?'':`<div class="pschool"><div class="chips">${d.lessons.map((l,h)=>`<i class="pencil" role="button" tabindex="0" data-addfor="${l}" aria-label="Hausaufgabe für ${SUBJ[l][0]}, ${h+1}. Stunde" style="--c:${sc(l)}">${SUBJ[l][1]}</i>`).join('')}</div>Schule bis ${d.until}</div>`;
-  if(d.off)return `<section class="panel off d faint" data-day="${i}"><header class="ph"><span class="dn">${d.k}</span><span class="dd">${d.date}.</span></header><div class="hr"></div><div class="aft tone" style="--dot:.35px">Sonntag ist frei.<br>Nicht für Aufgaben freigegeben.</div><div class="pfoot">Freigeben in den Einstellungen</div></section>`;
+  const head=`<header class="ph"><button class="ph-b" data-wday="${i}" aria-expanded="true" aria-label="${d.name} einklappen"><span class="dn">${d.k}</span><span class="dd">${d.date}.</span>${d.today?'<span class="tm">heute</span>':''}<span class="chev" aria-hidden="true">‹</span></button></header>`;
+  if(d.off)return `<section class="panel off d faint ${roomCls(i)}" data-day="${i}">${head}<div class="hr"></div><div class="aft rwash">Sonntag ist frei.<br>Nicht für Aufgaben freigegeben.</div><div class="pfoot">Freigeben in den Einstellungen</div></section>`;
   const {items,over}=buildDay(i);
   let body='';
   items.forEach(it=>{
@@ -863,8 +934,8 @@ function panel(i){
   });
   over.forEach(t=>body+=taskCard(t,'board'));
   const rw=roomWord(i);
-  const foot=rw==='zu voll'?'passt nicht ganz':`<b>${rw.replace(/^./,m=>m.toUpperCase())}</b>`;
-  return `<section class="panel d ${d.today?'today':'faint'}" data-day="${i}"><header class="ph"><span class="dn">${d.k}</span><span class="dd">${d.date}.</span>${d.today?'<span class="tm">heute</span>':''}</header>${flag}${school}<div class="hr"></div><div class="aft tone" style="--dot:${loadDot(i)}px">${body}</div><div class="pfoot">${foot}</div></section>`;
+  const foot=`<span class="rchip"><i></i>${rw==='zu voll'?'passt nicht ganz':rw.replace(/^./,m=>m.toUpperCase())}</span>`;
+  return `<section class="panel d ${d.today?'today':'faint'} ${roomCls(i)}" data-day="${i}">${head}${flag}${school}<div class="hr"></div><div class="aft rwash">${body}</div><div class="pfoot">${foot}</div></section>`;
 }
 
 
@@ -1022,7 +1093,7 @@ function renderPhone(){
   let h='';
   switch(ui.ptab){
     case 'heute':h=htmlToday();break;
-    case 'woche':h=`<div class="head"><div><h2>Woche</h2><div class="sub">KW 47 · 16. bis 22. November</div></div><span class="pill d faint">Woche A</span></div>${htmlWeekList()}<p class="hint" style="display:block">Je dichter die Punkte, desto voller der Tag.</p>`;break;
+    case 'woche':h=`<div class="head"><div><h2>Woche</h2><div class="sub">KW 47 · 16. bis 22. November</div></div><span class="pill d faint">Woche A</span></div>${htmlWeekList()}<p class="hint" style="display:block">Tag antippen zum Aufklappen.</p>`;break;
     case 'tests':h=ui.ptest?htmlTestDetail(ui.ptest,true):`<div class="head"><div><h2>Tests</h2><div class="sub">Deine Vorbereitung, deine Regeln</div></div></div>${htmlTestsList(null)}`;break;
     case 'zen':h=htmlZen('phone');break;
     case 'ich':h=`<div class="head"><div><h2>Ich</h2><div class="sub">1. Halbjahr · seit 19. August</div></div></div>${htmlRecap()}<div class="sec">Sammlung <small>${ui.coll.length} Figuren</small></div>${htmlCollection()}<div class="sec">Fähigkeiten</div>${htmlSkills()}<div class="sec">Deine Größen</div>${htmlSizes()}`;break;
@@ -1036,13 +1107,13 @@ function renderIpad(){
   const zenRunning=ui.zen&&!ui.zen.finished&&(ui.inow||ui.itab==='zen');
   iscr.classList.toggle('nowmode',!!ui.inow||!!zenRunning);
   if(ui.inow||zenRunning){iMain.innerHTML=`<div class="col" data-sk="inow" style="grid-row:1/-1">${ui.inow?htmlNow('ipad'):htmlZen('ipad')}</div>`;iMain.style.gridTemplateRows='1fr';return}
-  iMain.style.gridTemplateRows='auto 1fr';
+  iMain.style.gridTemplateRows=ui.itab==='woche'?'auto auto 1fr':'auto 1fr';
   let h='';
   if(ui.itab==='woche'){
     const td=tasks.filter(t=>t.done).length;
-    let wk='';for(let i=0;i<5;i++)wk+=panel(i);wk+=`<div class="wkcol">${panel(5)}${panel(6)}</div>`;
-    h=`<div class="mhead"><div><h2>KW 47</h2><div class="sub">16. bis 22. November · Woche A</div></div><div class="wsum"><span><b>${tasks.length}</b> Aufgaben</span><span><b>${td}</b> erledigt</span><span><b>2</b> Tests</span>${nowButton()}${addBtn()}</div></div><div class="week">${wk}</div>
-      <div class="ibub">${BUB2}Zieh Aufgaben auf einen anderen Tag. Wie voll ein Tag ist, zeigen die Punkte.</div>`;
+    let wk='';for(let i=0;i<7;i++)wk+=panel(i);const cols=DAYS.map((_,i)=>ui.wopen[i]?(DAYS[i].weekend?'.85fr':'1fr'):'48px').join(' ');
+    h=`<div class="mhead"><div><h2>KW 47</h2><div class="sub">16. bis 22. November · Woche A</div></div><div class="wsum"><span><b>${tasks.length}</b> Aufgaben</span><span><b>${td}</b> erledigt</span><span><b>2</b> Tests</span>${nowButton()}${addBtn()}</div></div>${roomLegend()}<div class="week" style="grid-template-columns:${cols}">${wk}</div>
+      <div class="ibub">${BUB2}Zieh Aufgaben auf einen anderen Tag. Wie voll ein Tag ist, zeigt die Farbe. Tageskopf antippen klappt ein.</div>`;
   }else if(ui.itab==='heute'){
     h=`<div class="mhead"><div><h2>Heute</h2><div class="sub">Dienstag, 17. November · KW 47</div></div><div class="wsum">${nowButton()}${addBtn()}</div></div>
       <div class="cols" style="grid-template-columns:1fr 1fr"><div class="col" data-sk="ih1">${htmlToday().replace(/<div class="head">[\s\S]*?<\/span><\/div>/,'').replace(/<button class="nowbtn"[\s\S]*?<\/button>/,'')}</div><div class="col" data-sk="ih2"><div class="sec" style="margin-top:4px">Diese Woche</div>${htmlWeekList()}</div></div>`;
@@ -1118,6 +1189,9 @@ document.addEventListener('click',e=>{
   if(D.skill){ui.skill=ui.skill===D.skill?null:D.skill;renderAll();return}
   if(D.recap){ui.recap=D.recap==='1';renderAll();return}
 });
+document.addEventListener('click',e=>{const b=e.target.closest('[data-wday],[data-pday]');if(!b||!b.closest('.device'))return;
+  if(b.dataset.wday!==undefined){const i=+b.dataset.wday;ui.wopen[i]=!ui.wopen[i];renderAll();return}
+  const i=+b.dataset.pday;ui.popen=ui.popen.includes(i)?ui.popen.filter(x=>x!==i):[...ui.popen,i];renderAll();});
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.dataset&&e.target.dataset.open&&e.target.closest('.device')){e.preventDefault();e.target.click()}});
 
 /* Ziehen in der iPad-Woche */
