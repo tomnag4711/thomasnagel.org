@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ippo – Konzept</title>
+<meta name="description" content="Ippo: Arbeitsstand des Konzepts für einen ruhigen Planer für Schüler.">
+<link rel="preload" href="Yomogi-Ippo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Yomogi";src:url("Yomogi-Ippo.woff2") format("woff2");font-display:swap}
+:root{
+  /* Layout: eine Lesespalte, Titel in Yomogi, Text in Systemschrift, Papiergrund */
+  --paper:#fdfdfb;--ink:#2a2a2e;--soft:#6d6d74;--line:#dcdcd8;--accent:#5f6fa3;--card:#ffffff;
+  --hand:"Yomogi",cursive;--body:-apple-system,"SF Pro Text",system-ui,"Segoe UI",sans-serif;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){:root{--paper:#1c1c20;--ink:#eeeeea;--soft:#a6a6ad;--line:#3c3c43;--accent:#aab6e2;--card:#222227}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+main{max-width:720px;margin:0 auto;padding:40px 20px 80px}
+.kopf h1{font-family:var(--hand);font-weight:400;font-size:64px;line-height:1;margin:0}
+.kopf p{color:var(--soft);margin:8px 0 0}
+.knopf{display:inline-flex;gap:8px;align-items:center;margin:22px 0 8px;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:500}
+.hinweis{font-size:14px;color:var(--soft)}
+h2{font-family:var(--hand);font-weight:400;font-size:32px;line-height:1.2;margin:44px 0 10px;text-wrap:balance}
+p,li{max-width:65ch}
+ul,ol{padding-left:1.2em}
+li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0;display:block;overflow-x:auto}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font-size:13px;color:var(--soft);font-weight:600}
+td:first-child{font-weight:600;white-space:nowrap}
+a{color:var(--accent)}
+footer{max-width:720px;margin:0 auto;padding:0 20px 40px;font-size:13px;color:var(--soft)}
+</style>
+</head>
+<body>
+<main>
+<div class="kopf">
+<h1>Ippo</h1>
+<p>一歩 · ein Schritt. Ein ruhiger Planer für Schüler von 12 bis 18. Arbeitsstand des Konzepts, 15. November 2026.</p>
+<a class="knopf" href="entwurf/">Klickbaren Entwurf ansehen →</a>
+<p class="hinweis">Der Entwurf zeigt iPhone und iPad nebeneinander, am besten auf einem großen Bildschirm ansehen. Alle Namen und Daten darin sind erfunden.</p>
+</div>
+<h2>Leitidee</h2>
+<p>Ein Planer für Schüler von 12 bis 18, der zeigt, was wirklich in den Nachmittag passt, und Selbstständigkeit trainiert statt Druck zu machen.</p>
+<ul>
+<li><strong>Selbstständigkeit:</strong> Die App macht keine Vorgaben. Der Schüler legt fest, wie er lernt; die App verteilt nur und spiegelt zurück.</li>
+<li><strong>Kein Druck:</strong> kein Rot, kein „überfällig“, keine Strafen, keine Uhr, die rückwärts läuft, keine Benachrichtigungen mit schlechtem Gewissen.</li>
+<li><strong>Realistisch:</strong> Wie viel Platz ein Tag hat, ergibt sich aus Stundenplan und festen Terminen, nicht aus Wunschdenken.</li>
+<li><strong>Freizeit zählt:</strong> Freizeit ist ein echter Block im Plan, nicht der Rest.</li>
+<li><strong>Selbst einschätzen lernen:</strong> Die Reflexion nach Tests ist der Kern, ganz ohne Zeitmessung.</li>
+<li><strong>Cool, nicht kindisch:</strong> eher Sport- oder Fitness-App als Kinderspiel. Nichts kann verloren gehen, kein Vergleich mit anderen.</li>
+</ul>
+<h2>Wichtigste Entscheidungen</h2>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Entscheidung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zielgruppe</td>
+<td>Schüler 12 bis 18; eine App für alle, Hilfen abschaltbar, nirgends „Kinder“-Ton</td>
+</tr>
+<tr>
+<td>Geräte</td>
+<td>iPhone (inkl. Duo) und iPad von Anfang an; iPhone im Hochformat, iPad im Querformat mit ganzer Woche</td>
+</tr>
+<tr>
+<td>Eltern</td>
+<td>Keine Eltern-Ansicht in Version 1</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Ippo (一歩, „ein Schritt“)</td>
+</tr>
+<tr>
+<td>Aufgabengrößen</td>
+<td>Vier Stufen ohne Zahl: Katze · Shiba · Hirsch · Bär</td>
+</tr>
+<tr>
+<td>Zeit</td>
+<td>Kein Countdown-Timer, keine Minutenangaben, kein Abgleich „geschätzt gegen gebraucht“</td>
+</tr>
+<tr>
+<td>Platz am Tag</td>
+<td>Intern berechnet, sichtbar nur als Rasterpunkte und „viel Platz / etwas Platz / voll“</td>
+</tr>
+<tr>
+<td>Erledigen</td>
+<td>„Jetzt“ zeigt nur die Aufgaben des Tages als Boxen; „Zen“ ist ruhiges Arbeiten ohne Uhr</td>
+</tr>
+<tr>
+<td>Lernen für Tests</td>
+<td>Eigene Regeln ohne Vorgabewerte, Reflexion nach jedem Test</td>
+</tr>
+<tr>
+<td>Optik</td>
+<td>Origami/Japan: fast weißes Papier, Buntstift-Pastell, Linien wie gezeichnet, Manga dezent oder deutlich; später weitere Themes</td>
+</tr>
+<tr>
+<td>Schrift</td>
+<td>Yomogi für Titel, Zahlen und Momente; Systemschrift für Text</td>
+</tr>
+<tr>
+<td>Technik</td>
+<td>Abgleich iPhone/iPad über das private iCloud; Stundenplan per Texterkennung; iOS 26 als Mindestversion</td>
+</tr>
+<tr>
+<td>Vokabeltrainer</td>
+<td>Kommt in Schritt 2, als Teil des Planers</td>
+</tr>
+</tbody>
+</table>
+<h2>Platz am Tag</h2>
+<p>Wie viel in einen Tag passt, rechnet die App im Hintergrund aus; der Schüler sieht keine Minuten, nur Platz.</p>
+<ul>
+<li><strong>Grundlage:</strong> Zeit zwischen Schulschluss plus Puffer und Schlafenszeit, minus feste Termine, Wegzeiten und Freizeitblöcke.</li>
+<li><strong>Belegt</strong> wird der Tag durch die Größen der geplanten Aufgaben (Katze, Shiba, Hirsch, Bär) mit internen Richtwerten, die nie in der App erscheinen.</li>
+<li><strong>Sichtbar:</strong> Rasterpunkte (je dichter, desto voller) und ein Wort: viel Platz, etwas Platz, voll.</li>
+<li><strong>Zu voll:</strong> kein Rot. „Passt heute nicht, Donnerstag hat noch Platz.“ und das Angebot zu verschieben.</li>
+<li><strong>Wochenende</strong> zählt nur, wenn der Schüler es freigibt.</li>
+</ul>
+<h2>Ansichten</h2>
+<table>
+<thead>
+<tr>
+<th>Ansicht</th>
+<th>Zweck</th>
+<th>iPad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heute</td>
+<td>Schulende, Nachmittag mit Platz, Aufgaben mit Tier, Tests der Woche, Knopf „Jetzt erledigen“</td>
+<td>Heute neben der Woche</td>
+</tr>
+<tr>
+<td>Woche</td>
+<td>Sieben Tage als Panels, Platz als Rasterpunkte, Aufgaben per Ziehen verschieben</td>
+<td>Alle Tage nebeneinander</td>
+</tr>
+<tr>
+<td>Jetzt</td>
+<td>Nur die offenen Aufgaben des Tages als große Boxen; alles andere ausgeblendet</td>
+<td>Boxen in 4 Spalten</td>
+</tr>
+<tr>
+<td>Zen</td>
+<td>Ruhiger Modus ohne Uhr, Origami faltet sich langsam, optional Fokus „Lernen“</td>
+<td>Vollbild</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>Bereitschaft, eigene Regel, Lernblöcke, Rückblick</td>
+<td>Liste und Detail nebeneinander</td>
+</tr>
+<tr>
+<td>Ich</td>
+<td>Sammlung, Fähigkeiten, Größen, Halbjahres-Rückblick</td>
+<td>Zweispaltig</td>
+</tr>
+<tr>
+<td>Einrichten</td>
+<td>Bundesland, Fächer, Stundenplan (auch per Foto), feste Termine</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<h2>Abläufe im Alltag</h2>
+<p>Die App hat zwei Zustände: <strong>Planen</strong> (Heute, Woche, Tests) und <strong>Erledigen</strong> (Jetzt, Zen).</p>
+<ol>
+<li><strong>Eintragen (in der Pause, unter 10 Sekunden):</strong> „+“ oder Fach im Stundenplan antippen, Stichwort, Tier wählen. Fällig ist automatisch die nächste Stunde des Fachs; die App schlägt einen Tag mit Platz vor.</li>
+<li><strong>Nachmittag:</strong> „Jetzt erledigen“ antippen. Nur die Aufgaben des Tages als Boxen; antippen, dann „Zen“ oder „Erledigt“.</li>
+<li><strong>Abend-Check (30 Sekunden):</strong> Erledigtes abhaken, Offenes auf einen Tag mit Platz schieben.</li>
+<li><strong>Sonntags-Planung (2 bis 3 Minuten):</strong> Woche ansehen, Tests im Blick, Wochenende bewusst frei oder bewusst genutzt.</li>
+<li><strong>Nach einem Test:</strong> Reflexion.</li>
+<li><strong>Zu den Zeugnissen:</strong> Halbjahres-Rückblick.</li>
+</ol>
+<h2>Eigene Lernregeln und Reflexion</h2>
+<p>Die App rechnet keinen Lernplan aus. Der Schüler legt fest, wie er sich vorbereitet, und überprüft das nach jedem Test selbst.</p>
+<ul>
+<li>Eine Regel gilt je Art (Klassenarbeit, Test, Vokabeltest, Referat) und kann je Fach abweichen, z. B. „Klassenarbeit: 4 Lernblöcke, je ein Hirsch, Start 8 Tage vorher“.</li>
+<li><strong>Keine Vorgabewerte.</strong> Beim ersten Test einer Art fragt die App: „Wie willst du dich vorbereiten?“ Die Antwort wird die Regel.</li>
+<li>Nach dem Test: „Wie war’s?“ (zu knapp / passte / mehr als nötig), dann „So lassen oder ändern?“. Die App bewertet nicht.</li>
+</ul>
+<h2>Jetzt und Zen</h2>
+<ul>
+<li><strong>Jetzt:</strong> nur die offenen Aufgaben des Tages, als große Papierboxen in der Fachfarbe mit Fach, Aufgabe und Tier. Antippen dreht die Box um: „Zen“, „Erledigt“ oder „Doch nicht“. Sind alle erledigt: „Alles erledigt für heute. Der Rest des Tages gehört dir.“</li>
+<li><strong>Zen:</strong> Vollbild, die gewählte Aufgabe klein und eine Origami-Figur, die sich langsam und endlos faltet. Keine Zahlen, keine Uhr, keine Runden. Optional Fokus „Lernen“, einmal per Kurzbefehl eingerichtet.</li>
+</ul>
+<h2>Gamification</h2>
+<p>Die Belohnung kommt von innen: selbst entscheiden, merken, dass man besser wird, echte freie Zeit.</p>
+<ul>
+<li><strong>Erledigt-Falten:</strong> Karte oder Box faltet sich zusammen.</li>
+<li><strong>Bereitschaft:</strong> Anzeige je Test füllt sich; am Testtag „Du bist bereit.“</li>
+<li><strong>Vorsprung:</strong> Wer früher fertig ist, sieht Platz im Plan entstehen.</li>
+<li><strong>Drei Fähigkeiten:</strong> Vorausdenken, Dranbleiben, Ausgleich. Sie sinken nie.</li>
+<li><strong>Sammlung:</strong> gefaltete Origami-Figuren aus dem Zen.</li>
+<li><strong>Halbjahres-Rückblick</strong> zu den Zeugnissen, als Bild teilbar.</li>
+<li><strong>Bewusst nicht:</strong> Streaks, Ranglisten, Punkte, Freischalten, Strafen.</li>
+</ul>
+<h2>Technik und Datenschutz</h2>
+<ul>
+<li>SwiftUI, Swift 6, iOS 26 als Mindestversion, Logik in Swift-Paketen, Deutsch und Englisch.</li>
+<li>Core Data mit iCloud, nur das private iCloud des Nutzers; Abgleich zwischen iPhone und iPad über dieselbe Apple-ID. Kein Account, kein Server.</li>
+<li>Stundenplan per Texterkennung mit Apples Vision, vollständig auf dem Gerät, mit Prüfblatt zum Korrigieren. Dieselbe Technik später für Vokabellisten.</li>
+<li>Kein Tracking, keine Werbung, keine Analyse.</li>
+</ul>
+<h2>Offene Punkte</h2>
+<ul>
+<li>Markenprüfung des Namens</li>
+<li>Gestaltung der Tiersymbole und der Origami-Faltfolgen</li>
+<li>Oberstufe mit Kursen und Klausuren</li>
+<li>Geld: kostenlos, Einmalkauf oder Trinkgeld</li>
+<li>Altersfreigabe und Hinweise für unter 16-Jährige</li>
+<li>Vokabeltrainer im Detail</li>
+</ul>
+</main>
+<footer>Schrift: Yomogi von Satsuyako, SIL Open Font License (<a href="OFL-Yomogi.txt">Lizenz</a>). · <a href="../impressum/">Impressum</a> · <a href="../datenschutz/">Datenschutz</a></footer>
+</body>
+</html>
